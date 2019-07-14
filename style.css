@@ -1,0 +1,230 @@
+/*
+*
+*
+* Nyong Studio by O-Kreator a.k.a. Doro-nyong
+*
+*
+*/
+
+
+
+/*
+* Basic Settings
+*/
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'effra', 'Noto Sans KR', sans-serif; 
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+a { color: black; }
+
+em { font-weight: bold; }
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+
+    margin-left: -2px;
+    padding-top: 14px;
+
+    text-transform: uppercase;
+}
+
+h1 + p {
+    margin-top: 4px;
+}
+
+.uppercased { text-transform: uppercase; }
+
+
+/*
+* Section: Basic Settings
+*/
+
+section.fullscreen {
+    position: absolute;
+
+    left: 0; right: 0; top: 0; bottom: 0;
+    padding: 48px 48px 48px 232px;
+}
+
+
+
+/*
+* Section: Main
+*/
+
+#main section {
+    position: absolute;
+    top: 166px; bottom: 48px; left: 232px; right: 48px;
+
+    font-size: 0;
+}
+
+#main article {
+    display: inline-block;
+
+    width: calc( (100% - 48px) / 3 );
+    height: 100%;
+    
+    margin-left: 24px;
+
+    background-size: cover;
+    background-position: center center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+#main article:first-of-type {
+    margin-left: 0;
+}
+
+#main article.main_menu_item_1 {
+    background-image: url(https://placehold.it/800x800);
+}
+
+#main article.main_menu_item_2 {
+    background-image: url(https://placehold.it/800x800);
+}
+
+#main article.main_menu_item_3 {
+    background-image: url(https://placehold.it/800x800);
+}
+
+#main article a {
+    position: relative;
+
+    display: block;
+    width: 100%; height: 100%;
+
+    text-decoration: none;
+    
+    background: rgba(166, 222, 96, 0.75);
+
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+#main article a:hover{
+    opacity: 1;
+}
+
+#main article div {
+    position: absolute;
+    top: 50%; left: 0; width: 100%;
+    transform: translateY(-50%);
+
+    font-size: 1.25rem;
+}
+
+#main article h2 {
+    display: inline-block;
+    height: 30px;
+
+    padding: 0 2px;
+    margin-bottom: 12px;
+    
+    font-size: 2rem;
+    line-height: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border: 1px solid black;
+}
+
+
+/*
+* Header
+*/
+
+header {
+    z-index: 10;
+
+    position: fixed;
+    top: 0; left: 0;
+
+    width: 180px; height: 166px;
+
+    padding: 48px 48px 0;
+    border-right: 1px solid black;
+}
+
+#logo_studio {
+    width: 80px;
+    user-select: none;
+}
+
+
+
+/*
+* Nav
+*/
+
+nav {
+    z-index: 10;
+
+    position: fixed;
+    top: 166px; left: 0;
+
+    padding: 40px 40px 0;
+}
+
+nav li:last-of-type {
+    margin-top: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+
+    padding: 8px;
+}
+
+
+
+/*
+* Footer
+*/
+
+footer {
+    z-index: 10;
+
+    position: fixed;
+    bottom: 0; left: 0;
+
+    width: 180px; height: 136px;
+    padding: 0 0 48px 48px;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+#logo_okreator {
+    width: 24px;
+    user-select: none;
+
+    margin-bottom: 6px;
+}
+
+
+
+/*
+* #Background
+*/
+
+#background {
+    z-index: -1;
+
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
