@@ -11,7 +11,7 @@
 
         <title>Nyong Studio</title>
     </head>
-    <body>
+    <body class="status_main_menu">
 
         <header>
             <object id="logo_studio" type="image/svg+xml" data="img/logo_studio_withtypo.svg"></object>
@@ -27,11 +27,30 @@
             </ul>
         </nav>
 
-        <section class="fullscreen" id="main">
-            <h1>Hello! I'm Doro-nyong.</h1>
-            <p><span class="uppercased">Learning Artist</span> specialized in <span class="uppercased">digital illustration</span></p>
 
-            <section>
+        <section class="fullscreen" id="main">
+            <h1>Hello!<span class="over480"> </span><span class="under480"><br></span>I'm Doro-nyong.</h1>
+            <p><span class="uppercased">Learning Artist</span><span class="over480"> </span><span class="under480"><br></span>specialized in <span class="uppercased">digital illustration</span></p>
+
+            <ul id="main_contact">
+                <li>
+                    <a href="#"><img class="twitter" src="img/icon_twitter.svg"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="discord" src="img/icon_discord.svg"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="youtube" src="img/icon_youtube.svg"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="instagram" src="img/icon_instagram.svg"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="devian" src="img/icon_devian.svg"></a>
+                </li>
+            </ul>
+
+            <section id="main_menu">
                 <article class="main_menu_item_1">
                     <a href="#">
                         <div>
@@ -60,17 +79,31 @@
 
         </section>
 
+
         <footer>
             <img id="logo_okreator" src="img/logo_okreator.svg">
-            <p>
+            <p class="over720">
                 Copyright 2019<br>
                 <em>Nyong Studio</em><br>
                 All rights reserved
             </p>
+            <p class="under720">
+                &copy; 2019 <em>Nyong Studio</em>
+            </p>
         </footer>
 
-        <div id="background">
-            
+        <div id="background_pc">
+            <div class="fill_green"></div>
+            <div class="fill_pattern"></div>
+            <div class="fill_pattern"></div>
+            <div class="fill_green"></div>
+        </div>
+
+        <div id="background_mobile">
+            <div class="fill_green"></div>
+            <div class="fill_pattern"></div>
+            <div class="fill_pattern"></div>
+            <div class="fill_green"></div>
         </div>
     </body>
 </html>
