@@ -9,6 +9,12 @@ const works = {
             thumbnail: {
                 image: "https://placehold.it/800x800",
                 type: "square" 
+            },
+            view: {
+                title: "Test",
+                date: "2019-07-17",
+                description: "이 설명은 테스트 설명입니다.",
+                image: "https://placehold.it/800x2400"
             }
         },
         {
@@ -16,6 +22,12 @@ const works = {
             thumbnail: {
                 image: "https://placehold.it/800x800",
                 type: "rectangle_hor" 
+            },
+            view: {
+                title: "Test",
+                date: "2019-07-17",
+                description: "이 설명은 테스트 설명입니다.",
+                image: "https://placehold.it/800x1200"
             }
         },
         {
@@ -23,6 +35,12 @@ const works = {
             thumbnail: {
                 image: "https://placehold.it/800x800",
                 type: "rectangle_hor" 
+            },
+            view: {
+                title: "Test",
+                date: "2019-07-17",
+                description: "이 설명은 테스트 설명입니다.",
+                image: "https://placehold.it/800x1200"
             }
         },
         {
@@ -30,6 +48,12 @@ const works = {
             thumbnail: {
                 image: "https://placehold.it/800x800",
                 type: "rectangle_ver" 
+            },
+            view: {
+                title: "Test",
+                date: "2019-07-17",
+                description: "이 설명은 테스트 설명입니다.",
+                image: "https://placehold.it/800x1200"
             }
         }
     ],
@@ -77,6 +101,12 @@ const menu = {
             }
         ],
         bodyStatus: "status_works"
+    },
+    worksView: {
+        link: null,
+        section: document.getElementById('works_view'),
+        bodyStatus: "status_works_view",
+        contents: null
     }
 }
 
@@ -109,9 +139,14 @@ const menuChange = function(target) {
 
 const worksListHeadline = document.querySelector("#works_list .works_headline h2");
 const worksListButtonBack = document.querySelector("#works_list a.button_back");
-
 const worksListLeft = document.querySelector("#works_list section:first-of-type article");
 const worksListRight = document.querySelector("#works_list section:last-of-type article");
+
+const worksViewButtonBack = document.querySelector("#works_view a.button_back");
+const worksViewTitle = document.querySelector("#works_description h2");
+const worksViewDate = document.querySelector("#works_description time");
+const worksViewDescription = document.querySelector("#works_description article");
+const worksViewImage = document.querySelector("#works_image");
 
 const worksListContentsAdd = function(worksListTarget, contents) {
     for (let i = 0; i < contents.length; i++) {
@@ -121,8 +156,12 @@ const worksListContentsAdd = function(worksListTarget, contents) {
         worksListItem.setAttribute('class', contents[i].thumbnail.type);
         worksListItem.setAttribute('href', '#');
         worksListItemThumbnail.setAttribute('src', contents[i].thumbnail.image);
-        
+
         worksListItem.appendChild(worksListItemThumbnail);
+        worksListItem.addEventListener('click', function() {
+            menuChange(menu.worksView);
+            contentsChange("worksView", contents[i]);
+        });
 
         worksListTarget.appendChild(worksListItem);
     }
@@ -140,18 +179,26 @@ const contentsChange = function(target, contents) {
 
         worksListContentsAdd(worksListLeft, worksListLeftOnly);
         worksListContentsAdd(worksListRight, worksListRightOnly);
-    } else if ( target === "worksView" ) {
+    } else if ( target === "worksListWide" ) {
         return 0;
+    } else if ( target === "worksView" ) {
+        worksViewTitle.innerHTML = contents.view.title;
+        worksViewDate.innerHTML = contents.view.date;
+        worksViewDescription.innerHTML = contents.view.description;
+
+        worksViewImage.setAttribute('src', contents.view.image);
     } else {
         console.error("Error! param of contentsChange: target '" + target + "' is not the right type.");
     }
 }
 
 
+
 menu.main.link.addEventListener('click', function() { menuChange(menu.main); });
 menu.about.link.addEventListener('click', function() { menuChange(menu.about); });
 
 worksListButtonBack.addEventListener('click', function() { menuChange(menu.main); });
+worksViewButtonBack.addEventListener('click', function() { menuChange(menu.worksList); });
 
 menu.worksList.link[0].addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", menu.worksList.contents[0]); });
 menu.worksList.link[1].addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", menu.worksList.contents[1]); });
