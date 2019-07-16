@@ -12,6 +12,21 @@ const menu = {
         link: document.getElementById('menu_about'),
         contents: document.getElementById('about'),
         bodyStatus: "status_about"
+    },
+    works1: {
+        link: document.getElementById('menu_works_1'),
+        contents: document.getElementById('works_1'),
+        bodyStatus: "status_works"
+    },
+    works2: {
+        link: document.getElementById('menu_works_2'),
+        contents: document.getElementById('works_2'),
+        bodyStatus: "status_works"
+    },
+    works3: {
+        link: document.getElementById('menu_works_3'),
+        contents: document.getElementById('works_3'),
+        bodyStatus: "status_works"
     }
 }
 
@@ -37,3 +52,6 @@ const menuChange = function(target) {
 
 menu.main.link.addEventListener('click', function() { menuChange(menu.main); });
 menu.about.link.addEventListener('click', function() { menuChange(menu.about); });
+menu.works1.link.addEventListener('click', function() { menuChange(menu.works1); });
+menu.works2.link.addEventListener('click', function() { menuChange(menu.works2); });
+menu.works3.link.addEventListener('click', function() { menuChange(menu.works3); });
