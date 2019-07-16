@@ -38,9 +38,8 @@ const works = {
 }
 
 
-
 /*
-* SPA
+* Menu Data
 */
 
 const menu = {
@@ -81,9 +80,11 @@ const menu = {
     }
 }
 
-const worksListHeadline = document.querySelector("#works_list .works_headline h2");
-const worksListButtonBack = document.querySelector("#works_list a.button_back");
 
+
+/*
+* SPA
+*/
 
 let currentMenu = menu.main;
 
@@ -106,9 +107,11 @@ const menuChange = function(target) {
 }
 
 
+const worksListHeadline = document.querySelector("#works_list .works_headline h2");
+const worksListButtonBack = document.querySelector("#works_list a.button_back");
+
 const worksListLeft = document.querySelector("#works_list section:first-of-type article");
 const worksListRight = document.querySelector("#works_list section:last-of-type article");
-
 
 const worksListContentsAdd = function(worksListTarget, contents) {
     for (let i = 0; i < contents.length; i++) {
@@ -117,14 +120,13 @@ const worksListContentsAdd = function(worksListTarget, contents) {
 
         worksListItem.setAttribute('class', contents[i].thumbnail.type);
         worksListItem.setAttribute('href', '#');
-
         worksListItemThumbnail.setAttribute('src', contents[i].thumbnail.image);
-
+        
         worksListItem.appendChild(worksListItemThumbnail);
+
         worksListTarget.appendChild(worksListItem);
     }
 }
-
 
 const contentsChange = function(target, contents) {
     if ( target === "worksList" ) {
@@ -138,13 +140,10 @@ const contentsChange = function(target, contents) {
 
         worksListContentsAdd(worksListLeft, worksListLeftOnly);
         worksListContentsAdd(worksListRight, worksListRightOnly);
-
     } else if ( target === "worksView" ) {
         return 0;
-
     } else {
         console.error("Error! param of contentsChange: target '" + target + "' is not the right type.");
-        
     }
 }
 
