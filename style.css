@@ -608,6 +608,10 @@ a.button_back img {
 */
 
 @media screen and (min-width: 1200px) {
+    #works_view {
+        text-align: right;
+    }
+    
     #works_view .works_headline {
         position: fixed;
     }
@@ -616,6 +620,7 @@ a.button_back img {
 
 #works_description {
     z-index: 2;
+    text-align: left;
 }
 
 #works_description h2 {
@@ -674,12 +679,8 @@ a.button_back img {
 
 
 @media screen and (min-width: 1200px) {
-    #works_image {
-        position: absolute;
-        top: 48px; right: 48px;
-        
-        width: calc( 100% - ( 304px + (100% - 48px) / 3 ) );
-        margin-bottom: 48px;
+    #works_image {        
+        width: calc( 100vw - ( 304px + (100vw - 48px) / 3 ) );
     }
 }
 
@@ -687,7 +688,8 @@ a.button_back img {
     #works_image {
         width: 100%;
 
-        margin-top: 36px;
+        margin-top: 31px;
+        margin-bottom: -5px;
     }
 }
 
