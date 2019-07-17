@@ -200,6 +200,8 @@ const menu = {
 
 let currentMenu = menu.main;
 let previousMenu;
+let previousWorksList;
+let previousWorksListTarget;
 
 const worksListHeadline = document.querySelector('#works_list .works_headline h2');
 const worksListButtonBack = document.querySelector('#works_list a.button_back');
@@ -285,7 +287,10 @@ const contentsChange = function(target, contents) {
 
         worksListContentsAdd(worksListLeft, worksListLeftOnly);
         worksListContentsAdd(worksListRight, worksListRightOnly);
+
         previousMenu = contents;
+        previousWorksList = menu.worksList;
+        previousWorksListTarget = target;
 
     } else if ( target === 'worksListWide' ) {
         worksListWideHeadline.innerHTML = contents.title;
@@ -293,7 +298,10 @@ const contentsChange = function(target, contents) {
         worksListWideTarget.innerHTML = '';
 
         worksListWideContentsAdd(contents.list);
+
         previousMenu = contents;
+        previousWorksList = menu.worksListWide;
+        previousWorksListTarget = target;
 
     } else if ( target === 'worksView' ) {
         worksViewTitle.innerHTML = contents.view.title;
@@ -334,7 +342,7 @@ menu.about.link.addEventListener('click', function() { menuChange(menu.about); }
 
 worksListButtonBack.addEventListener('click', function() { menuChange(menu.main); });
 worksListWideButtonBack.addEventListener('click', function() { menuChange(menu.main); });
-worksViewButtonBack.addEventListener('click', function() { menuChange(menu.worksList); contentsChange('worksList', previousMenu); });
+worksViewButtonBack.addEventListener('click', function() { menuChange(previousWorksList); contentsChange(previousWorksListTarget, previousMenu); });
 
 menu.worksList.link[0].addEventListener('click', function() {menuChange(menu.worksList); contentsChange('worksList', menu.worksList.contents[0]); });
 menu.worksList.link[1].addEventListener('click', function() {menuChange(menu.worksList); contentsChange('worksList', menu.worksList.contents[1]); });
