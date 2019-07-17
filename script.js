@@ -117,6 +117,7 @@ const menu = {
 */
 
 let currentMenu = menu.main;
+let previousMenu;
 
 const menuChange = function(target) {
     if (target === currentMenu) { return; }
@@ -149,21 +150,41 @@ const worksViewDescription = document.querySelector("#works_description article"
 const worksViewImage = document.querySelector("#works_image");
 
 const worksListContentsAdd = function(worksListTarget, contents) {
+    const worksListItemEventListener = function(i) {
+        return function() {
+            menuChange(menu.worksView);
+            contentsChange("worksView", contents[i]);
+        }
+    }
+
+    // TODO: 전역으로 변경 후, worksListTaget에 국한하지 않고 모든 worksListItem에 remove 리스너가 추가되도록 기능 변경.
+    const removeListenerList = [];
+
+    const workListRemoveEventListener = function() {
+        for(let listenerIndex = 0; listenerIndex < removeListenerList.length; listenerIndex++) {
+            removeListenerList[listenerIndex]();
+        }
+        this.removeEventListener('click', workListRemoveEventListener);
+    }
+
     for (let i = 0; i < contents.length; i++) {
         let worksListItem = document.createElement("a");
         let worksListItemThumbnail = document.createElement("img");
-
+        
+        worksListTarget.appendChild(worksListItem);
+        worksListItem.appendChild(worksListItemThumbnail);
+        
         worksListItem.setAttribute('class', contents[i].thumbnail.type);
         worksListItem.setAttribute('href', '#');
         worksListItemThumbnail.setAttribute('src', contents[i].thumbnail.image);
+        
+        let eventListener = worksListItemEventListener(i);
+        worksListItem.addEventListener('click', eventListener);
+        removeListenerList.push(function() { worksListItem.removeEventListener('click', eventListener); });        
+    }
 
-        worksListItem.appendChild(worksListItemThumbnail);
-        worksListItem.addEventListener('click', function() {
-            menuChange(menu.worksView);
-            contentsChange("worksView", contents[i]);
-        });
-
-        worksListTarget.appendChild(worksListItem);
+    for(let j = 0; j < worksListTarget.childNodes.length; j++) {
+        worksListTarget.childNodes[j].addEventListener('click', workListRemoveEventListener);
     }
 }
 
@@ -179,6 +200,8 @@ const contentsChange = function(target, contents) {
 
         worksListContentsAdd(worksListLeft, worksListLeftOnly);
         worksListContentsAdd(worksListRight, worksListRightOnly);
+        previousMenu = contents;
+
     } else if ( target === "worksListWide" ) {
         return 0;
     } else if ( target === "worksView" ) {
