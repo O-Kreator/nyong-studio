@@ -5,113 +5,136 @@
 const works = {
     visualDev: [
         {
-            position: "left",
+            position: 'left',
             thumbnail: {
-                image: "https://placehold.it/800x800",
-                type: "square" 
+                image: 'https://placehold.it/800x800',
+                type: 'square' 
             },
             view: {
                 title: '“Give me<br>some sweets<br>or I\'ll trick ya!<br>Gao-!”',
-                date: "2019-07-17",
-                description: "‘박쥐 인간 복장을 입은<br>여우 동물 어린이 캐릭터’로,<br>화려한 색과 빛을<br>표현하고자 하였습니다.",
-                image: "https://placehold.it/800x2400"
+                date: '2019-07-17',
+                description: '‘박쥐 인간 복장을 입은<br>여우 동물 어린이 캐릭터’로,<br>화려한 색과 빛을<br>표현하고자 하였습니다.',
+                image: 'https://placehold.it/800x2400'
             }
         },
         {
-            position: "left",
+            position: 'left',
             thumbnail: {
-                image: "https://placehold.it/800x800",
-                type: "rectangle_hor" 
+                image: 'https://placehold.it/800x800',
+                type: 'rectangle_hor' 
             },
             view: {
-                title: "Test",
-                date: "2019-07-17",
-                description: "이 설명은 테스트 설명입니다.",
-                image: "https://placehold.it/800x1200"
+                title: 'Test',
+                date: '2019-07-17',
+                description: '이 설명은 테스트 설명입니다.',
+                image: 'https://placehold.it/800x1200'
             }
         },
         {
-            position: "right",
+            position: 'right',
             thumbnail: {
-                image: "https://placehold.it/800x800",
-                type: "rectangle_hor" 
+                image: 'https://placehold.it/800x800',
+                type: 'rectangle_hor' 
             },
             view: {
-                title: "Test",
-                date: "2019-07-17",
-                description: "이 설명은 테스트 설명입니다.",
-                image: "https://placehold.it/800x1200"
+                title: 'Test',
+                date: '2019-07-17',
+                description: '이 설명은 테스트 설명입니다.',
+                image: 'https://placehold.it/800x1200'
             }
         },
         {
-            position: "right",
+            position: 'right',
             thumbnail: {
-                image: "https://placehold.it/800x800",
-                type: "rectangle_ver" 
+                image: 'https://placehold.it/800x800',
+                type: 'rectangle_ver' 
             },
             view: {
-                title: "Test",
-                date: "2019-07-17",
-                description: "이 설명은 테스트 설명입니다.",
-                image: "https://placehold.it/800x1200"
+                title: 'Test',
+                date: '2019-07-17',
+                description: '이 설명은 테스트 설명입니다.',
+                image: 'https://placehold.it/800x1200'
             }
         }
     ],
     illustration:  [
         {
-            position: "left",
+            position: 'left',
             thumbnail: {
-                image: "https://placehold.it/800x800",
-                type: "square" 
+                image: 'https://placehold.it/800x800',
+                type: 'square' 
             },
             view: {
                 title: '“Give me<br>some sweets<br>or I\'ll trick ya!<br>Gao-!”',
-                date: "2019-07-17",
-                description: "‘박쥐 인간 복장을 입은<br>여우 동물 어린이 캐릭터’로,<br>화려한 색과 빛을<br>표현하고자 하였습니다.",
-                image: "https://placehold.it/800x2400"
+                date: '2019-07-17',
+                description: '‘박쥐 인간 복장을 입은<br>여우 동물 어린이 캐릭터’로,<br>화려한 색과 빛을<br>표현하고자 하였습니다.',
+                image: 'https://placehold.it/800x2400'
             }
         },
         {
-            position: "left",
+            position: 'left',
             thumbnail: {
-                image: "https://placehold.it/800x800",
-                type: "rectangle_hor" 
+                image: 'https://placehold.it/800x800',
+                type: 'rectangle_hor' 
             },
             view: {
-                title: "Test",
-                date: "2019-07-17",
-                description: "이 설명은 테스트 설명입니다.",
-                image: "https://placehold.it/800x1200"
+                title: 'Test',
+                date: '2019-07-17',
+                description: '이 설명은 테스트 설명입니다.',
+                image: 'https://placehold.it/800x1200'
             }
         },
         {
-            position: "right",
+            position: 'right',
             thumbnail: {
-                image: "https://placehold.it/800x800",
-                type: "rectangle_hor" 
+                image: 'https://placehold.it/800x800',
+                type: 'rectangle_hor' 
             },
             view: {
-                title: "Test",
-                date: "2019-07-17",
-                description: "이 설명은 테스트 설명입니다.",
-                image: "https://placehold.it/800x1200"
+                title: 'Test',
+                date: '2019-07-17',
+                description: '이 설명은 테스트 설명입니다.',
+                image: 'https://placehold.it/800x1200'
             }
         },
         {
-            position: "right",
+            position: 'right',
             thumbnail: {
-                image: "https://placehold.it/800x800",
-                type: "rectangle_ver" 
+                image: 'https://placehold.it/800x800',
+                type: 'rectangle_ver' 
             },
             view: {
-                title: "Test",
-                date: "2019-07-17",
-                description: "이 설명은 테스트 설명입니다.",
-                image: "https://placehold.it/800x1200"
+                title: 'Test',
+                date: '2019-07-17',
+                description: '이 설명은 테스트 설명입니다.',
+                image: 'https://placehold.it/800x1200'
             }
         }
     ],
-    storytelling: []
+    storytelling: [
+        {
+            thumbnail: {
+                image: 'https://placehold.it/800x800',
+            },
+            view: {
+                title: 'Test',
+                date: '2019-07-17',
+                description: '이 설명은 테스트 설명입니다.',
+                image: 'https://placehold.it/800x1200'
+            }
+        },
+        {
+            thumbnail: {
+                image: 'https://placehold.it/800x800',
+            },
+            view: {
+                title: 'Test',
+                date: '2019-07-17',
+                description: '이 설명은 테스트 설명입니다.',
+                image: 'https://placehold.it/800x1200'
+            }
+        }
+    ]
 }
 
 
@@ -123,42 +146,48 @@ const menu = {
     main: {
         link: document.getElementById('menu_main'),
         section: document.getElementById('main'),
-        bodyStatus: "status_main_menu",
+        bodyStatus: 'status_main_menu',
         contents: null
     },
     about: {
         link: document.getElementById('menu_about'),
         section: document.getElementById('about'),
-        bodyStatus: "status_about",
+        bodyStatus: 'status_about',
         contents: null
     },
     worksList: {
         link: [
             document.getElementById('menu_works_list_1'),
-            document.getElementById('menu_works_list_2'),
-            document.getElementById('menu_works_list_3')
+            document.getElementById('menu_works_list_2')
         ],
         section: document.getElementById('works_list'),
         contents: [
             {
-                title: "Visual Dev.",
+                title: 'Visual Dev.',
                 list: works.visualDev
             },
             {
-                title: "Illustration",
+                title: 'Illustration',
                 list: works.illustration
-            },
+            }
+        ],
+        bodyStatus: 'status_works'
+    },
+    worksListWide: {
+        link: document.getElementById('menu_works_list_3'),
+        section: document.getElementById('works_list_wide'),
+        contents: [
             {
-                title: "Storytelling",
+                title: 'Storytelling',
                 list: works.storytelling
             }
         ],
-        bodyStatus: "status_works"
+        bodyStatus: 'status_works'
     },
     worksView: {
         link: null,
         section: document.getElementById('works_view'),
-        bodyStatus: "status_works_view",
+        bodyStatus: 'status_works_view',
         contents: null
     }
 }
@@ -172,17 +201,20 @@ const menu = {
 let currentMenu = menu.main;
 let previousMenu;
 
+const worksListHeadline = document.querySelector('#works_list .works_headline h2');
+const worksListButtonBack = document.querySelector('#works_list a.button_back');
+const worksListLeft = document.querySelector('#works_list article:first-of-type');
+const worksListRight = document.querySelector('#works_list article:last-of-type');
 
-const worksListHeadline = document.querySelector("#works_list .works_headline h2");
-const worksListButtonBack = document.querySelector("#works_list a.button_back");
-const worksListLeft = document.querySelector("#works_list article:first-of-type");
-const worksListRight = document.querySelector("#works_list article:last-of-type");
+const worksListWideHeadline = document.querySelector('#works_list_wide .works_headline h2');
+const worksListWideButtonBack = document.querySelector('#works_list_wide a.button_back');
+const worksListWideTarget = document.querySelector('#works_list_wide article');
 
-const worksViewButtonBack = document.querySelector("#works_view a.button_back");
-const worksViewTitle = document.querySelector("#works_description h2");
-const worksViewDate = document.querySelector("#works_description time");
-const worksViewDescription = document.querySelector("#works_description article");
-const worksViewImage = document.querySelector("#works_image");
+const worksViewButtonBack = document.querySelector('#works_view a.button_back');
+const worksViewTitle = document.querySelector('#works_description h2');
+const worksViewDate = document.querySelector('#works_description time');
+const worksViewDescription = document.querySelector('#works_description article');
+const worksViewImage = document.querySelector('#works_image');
 
 let removeListenerList = [];
 
@@ -196,13 +228,13 @@ const worksListContentsAdd = function(worksListTarget, contents) {
     const worksListItemEventListener = function(i) {
         return function() {
             menuChange(menu.worksView);
-            contentsChange("worksView", contents[i]);
+            contentsChange('worksView', contents[i]);
         }
     }
 
     for (let i = 0; i < contents.length; i++) {
-        let worksListItem = document.createElement("a");
-        let worksListItemThumbnail = document.createElement("img");
+        let worksListItem = document.createElement('a');
+        let worksListItemThumbnail = document.createElement('img');
         
         worksListTarget.appendChild(worksListItem);
         worksListItem.appendChild(worksListItemThumbnail);
@@ -213,37 +245,68 @@ const worksListContentsAdd = function(worksListTarget, contents) {
         
         let eventListener = worksListItemEventListener(i);
         worksListItem.addEventListener('click', eventListener);
-        removeListenerList.push(function() { worksListItem.removeEventListener('click', eventListener); });        
+        removeListenerList.push(function() { worksListItem.removeEventListener('click', eventListener); });
+    }
+}
+
+const worksListWideContentsAdd = function(contents) {
+    const worksListWideItemEventListener = function (i) {
+        return function() {
+            menuChange(menu.worksView);
+            contentsChange('worksView', contents[i]);
+        }
+    }
+
+    for (let i = 0; i < contents.length; i++) {
+        let worksListWideItem = document.createElement('a');
+        let worksListWideItemThumbnail = document.createElement('img');
+
+        worksListWideTarget.appendChild(worksListWideItem);
+        worksListWideItem.appendChild(worksListWideItemThumbnail);
+
+        worksListWideItem.setAttribute('href', '#');
+        worksListWideItemThumbnail.setAttribute('src', contents[i].thumbnail.image);
+
+        let eventListener = worksListWideItemEventListener(i);
+        worksListWideItem.addEventListener('click', eventListener);
+        removeListenerList.push(function() { worksListWideItem.removeEventListener('click', eventListener); });
     }
 }
 
 const contentsChange = function(target, contents) {
-    if ( target === "worksList" ) {
+    if ( target === 'worksList' ) {
         worksListHeadline.innerHTML = contents.title;
 
-        let worksListLeftOnly = contents.list.filter( function( item ) { return item.position === "left"; } );
-        let worksListRightOnly = contents.list.filter( function( item ) { return item.position === "right"; } );
+        let worksListLeftOnly = contents.list.filter( function( item ) { return item.position === 'left'; } );
+        let worksListRightOnly = contents.list.filter( function( item ) { return item.position === 'right'; } );
 
-        worksListLeft.innerHTML = "";
-        worksListRight.innerHTML = "";
+        worksListLeft.innerHTML = '';
+        worksListRight.innerHTML = '';
 
         worksListContentsAdd(worksListLeft, worksListLeftOnly);
         worksListContentsAdd(worksListRight, worksListRightOnly);
         previousMenu = contents;
 
-    } else if ( target === "worksListWide" ) {
-        return;
-    } else if ( target === "worksView" ) {
+    } else if ( target === 'worksListWide' ) {
+        worksListWideHeadline.innerHTML = contents.title;
+
+        worksListWideTarget.innerHTML = '';
+
+        worksListWideContentsAdd(contents.list);
+        previousMenu = contents;
+
+    } else if ( target === 'worksView' ) {
         worksViewTitle.innerHTML = contents.view.title;
         worksViewDate.innerHTML = contents.view.date;
         worksViewDescription.innerHTML = contents.view.description;
 
         worksViewImage.setAttribute('src', contents.view.image);
+
     } else {
         console.error("Error! param of contentsChange: target '" + target + "' is not the right type.");
+
     }
 }
-
 
 const menuChange = function(target) {
     if (target === currentMenu) { return; }
@@ -270,6 +333,11 @@ menu.main.link.addEventListener('click', function() { menuChange(menu.main); });
 menu.about.link.addEventListener('click', function() { menuChange(menu.about); });
 
 worksListButtonBack.addEventListener('click', function() { menuChange(menu.main); });
-worksViewButtonBack.addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", previousMenu); });
+worksListWideButtonBack.addEventListener('click', function() { menuChange(menu.main); });
+worksViewButtonBack.addEventListener('click', function() { menuChange(menu.worksList); contentsChange('worksList', previousMenu); });
 
-menu.worksList.link.forEach(function(item, index) {item.addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", menu.worksList.contents[index]); });});
+menu.worksList.link[0].addEventListener('click', function() {menuChange(menu.worksList); contentsChange('worksList', menu.worksList.contents[0]); });
+menu.worksList.link[1].addEventListener('click', function() {menuChange(menu.worksList); contentsChange('worksList', menu.worksList.contents[1]); });
+menu.worksListWide.link.addEventListener('click', function() {menuChange(menu.worksListWide); contentsChange('worksListWide', menu.worksListWide.contents[0]); });
+
+// menu.worksList.link.forEach(function(item, index) {item.addEventListener('click', function() { menuChange(menu.worksList); contentsChange('worksList', menu.worksList.contents[index]); });});
