@@ -1,5 +1,4 @@
 <img src="img/logo_studio_withtypo.svg" width="180">
-<br>
 개인 아티스트 브랜드 '도로뇽'의 웹 사이트, '뇽 스튜디오'의 소스코드입니다.
 <br><br>
 <img src="https://img.shields.io/github/stars/Doro-nyong/nyong-studio.svg?style=flat-square">
