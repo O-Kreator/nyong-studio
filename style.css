@@ -504,36 +504,36 @@ a.button_back img {
 }
 
 @media screen and (min-width: 960px) {
-    #works_list section {
+    #works_list article {
         float: left;
     
         width: calc( ( 100% - 24px ) / 2 );
         margin-left: 24px;
     }
     
-    #works_list section:first-of-type {
+    #works_list article:first-of-type {
         margin-left: 0;
     }
 }
 
 @media screen and (min-width: 480px) and (max-width: 959px) {
-    #works_list section {
+    #works_list article {
         width: 100%;
         margin-top: 24px;
     }
 
-    #works_list section:first-of-type {
+    #works_list article:first-of-type {
         margin-top: 0;
     }
 }
 
 @media screen and (max-width: 479px) {
-    #works_list section {
+    #works_list article {
         width: 100%;
         margin-top: 8px;
     }
 
-    #works_list section:first-of-type {
+    #works_list article:first-of-type {
         margin-top: 0;
     }
 }

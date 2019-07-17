@@ -175,8 +175,8 @@ let previousMenu;
 
 const worksListHeadline = document.querySelector("#works_list .works_headline h2");
 const worksListButtonBack = document.querySelector("#works_list a.button_back");
-const worksListLeft = document.querySelector("#works_list section:first-of-type article");
-const worksListRight = document.querySelector("#works_list section:last-of-type article");
+const worksListLeft = document.querySelector("#works_list article:first-of-type");
+const worksListRight = document.querySelector("#works_list article:last-of-type");
 
 const worksViewButtonBack = document.querySelector("#works_view a.button_back");
 const worksViewTitle = document.querySelector("#works_description h2");
