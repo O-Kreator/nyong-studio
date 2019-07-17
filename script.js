@@ -149,22 +149,20 @@ const worksViewDate = document.querySelector("#works_description time");
 const worksViewDescription = document.querySelector("#works_description article");
 const worksViewImage = document.querySelector("#works_image");
 
+let removeListenerList = [];
+
+const workListRemoveEventListener = function() {
+    removeListenerList.forEach(function(item) { item(); });
+    this.removeEventListener('click', workListRemoveEventListener);
+    removeListenerList = [];
+}
+
 const worksListContentsAdd = function(worksListTarget, contents) {
     const worksListItemEventListener = function(i) {
         return function() {
             menuChange(menu.worksView);
             contentsChange("worksView", contents[i]);
         }
-    }
-
-    // TODO: 전역으로 변경 후, worksListTaget에 국한하지 않고 모든 worksListItem에 remove 리스너가 추가되도록 기능 변경.
-    const removeListenerList = [];
-
-    const workListRemoveEventListener = function() {
-        for(let listenerIndex = 0; listenerIndex < removeListenerList.length; listenerIndex++) {
-            removeListenerList[listenerIndex]();
-        }
-        this.removeEventListener('click', workListRemoveEventListener);
     }
 
     for (let i = 0; i < contents.length; i++) {
@@ -203,7 +201,7 @@ const contentsChange = function(target, contents) {
         previousMenu = contents;
 
     } else if ( target === "worksListWide" ) {
-        return 0;
+        return;
     } else if ( target === "worksView" ) {
         worksViewTitle.innerHTML = contents.view.title;
         worksViewDate.innerHTML = contents.view.date;
@@ -221,8 +219,6 @@ menu.main.link.addEventListener('click', function() { menuChange(menu.main); });
 menu.about.link.addEventListener('click', function() { menuChange(menu.about); });
 
 worksListButtonBack.addEventListener('click', function() { menuChange(menu.main); });
-worksViewButtonBack.addEventListener('click', function() { menuChange(menu.worksList); });
+worksViewButtonBack.addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", previousMenu); });
 
-menu.worksList.link[0].addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", menu.worksList.contents[0]); });
-menu.worksList.link[1].addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", menu.worksList.contents[1]); });
-menu.worksList.link[2].addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", menu.worksList.contents[2]); });
+menu.worksList.link.forEach(function(item, index) {item.addEventListener('click', function() { menuChange(menu.worksList); contentsChange("worksList", menu.worksList.contents[index]); });});
