@@ -504,43 +504,43 @@ a.button_back img {
 }
 
 @media screen and (min-width: 960px) {
-    .works section {
+    #works_list section {
         float: left;
     
         width: calc( ( 100% - 24px ) / 2 );
         margin-left: 24px;
     }
     
-    .works section:first-of-type {
+    #works_list section:first-of-type {
         margin-left: 0;
     }
 }
 
 @media screen and (min-width: 480px) and (max-width: 959px) {
-    .works section {
+    #works_list section {
         width: 100%;
         margin-top: 24px;
     }
 
-    .works section:first-of-type {
+    #works_list section:first-of-type {
         margin-top: 0;
     }
 }
 
 @media screen and (max-width: 479px) {
-    .works section {
+    #works_list section {
         width: 100%;
         margin-top: 8px;
     }
 
-    .works section:first-of-type {
+    #works_list section:first-of-type {
         margin-top: 0;
     }
 }
 
 
 
-.works article a {
+#works_list article a {
     position: relative;
     display: block;
     
@@ -550,58 +550,58 @@ a.button_back img {
     overflow: hidden;
 }
 
-.works article a:first-of-type {
+#works_list article a:first-of-type {
     margin-top: 0;
 }
 
-.works article a img {
+#works_list article a img {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 960px) {
-    .works article a { margin-top: 24px; }
-    .works article a.square { height: calc( 50vw - 152px ); }
-    .works article a.rectangle_hor { height: calc( ( 100vw - 328px ) / 3 ); }
-    .works article a.rectangle_ver { height: calc( ( 100vw - 328px ) / 3 * 2 + 24px ); }
+    #works_list article a { margin-top: 24px; }
+    #works_list article a.square { height: calc( 50vw - 152px ); }
+    #works_list article a.rectangle_hor { height: calc( ( 100vw - 328px ) / 3 ); }
+    #works_list article a.rectangle_ver { height: calc( ( 100vw - 328px ) / 3 * 2 + 24px ); }
 
-    .works article a.square img { height: 100%; }
-    .works article a.rectangle_hor img { width: 100%; }
-    .works article a.rectangle_ver img { height: 100%; }
+    #works_list article a.square img { height: 100%; }
+    #works_list article a.rectangle_hor img { width: 100%; }
+    #works_list article a.rectangle_ver img { height: 100%; }
 }
 
 @media screen and (min-width: 720px) and (max-width: 959px) {
-    .works article a { margin-top: 24px; }
-    .works article a.square { height: calc( 100vw - 280px ); }
-    .works article a.rectangle_hor { height: calc( ( 100vw - 280px ) / 3 * 2 ); }
-    .works article a.rectangle_ver { height: calc( ( 100vw - 280px ) / 4 * 5 + 24px ); }
+    #works_list article a { margin-top: 24px; }
+    #works_list article a.square { height: calc( 100vw - 280px ); }
+    #works_list article a.rectangle_hor { height: calc( ( 100vw - 280px ) / 3 * 2 ); }
+    #works_list article a.rectangle_ver { height: calc( ( 100vw - 280px ) / 4 * 5 + 24px ); }
 
-    .works article a.square img { height: 100%; }
-    .works article a.rectangle_hor img { width: 100%; }
-    .works article a.rectangle_ver img { height: 100%; }
+    #works_list article a.square img { height: 100%; }
+    #works_list article a.rectangle_hor img { width: 100%; }
+    #works_list article a.rectangle_ver img { height: 100%; }
 }
 
 @media screen and (min-width: 480px) and (max-width: 719px) {
-    .works article a { margin-top: 24px; }
-    .works article a.square { height: calc( 100vw - 64px ); }
-    .works article a.rectangle_hor { height: calc( ( 100vw - 64px ) / 3 * 2 ); }
-    .works article a.rectangle_ver { height: calc( ( 100vw - 64px ) / 4 * 5 + 24px ); }
+    #works_list article a { margin-top: 24px; }
+    #works_list article a.square { height: calc( 100vw - 64px ); }
+    #works_list article a.rectangle_hor { height: calc( ( 100vw - 64px ) / 3 * 2 ); }
+    #works_list article a.rectangle_ver { height: calc( ( 100vw - 64px ) / 4 * 5 + 24px ); }
 
-    .works article a.square img { height: 100%; }
-    .works article a.rectangle_hor img { width: 100%; }
-    .works article a.rectangle_ver img { height: 100%; }
+    #works_list article a.square img { height: 100%; }
+    #works_list article a.rectangle_hor img { width: 100%; }
+    #works_list article a.rectangle_ver img { height: 100%; }
 }
 
 @media screen and (max-width: 480px) {
-    .works article a { margin-top: 8px; }
-    .works article a.square { height: calc( 100vw - 32px ); }
-    .works article a.rectangle_hor { height: calc( ( 100vw - 32px ) / 3 * 2 ); }
-    .works article a.rectangle_ver { height: calc( ( 100vw - 32px ) / 4 * 5 + 24px ); }
+    #works_list article a { margin-top: 8px; }
+    #works_list article a.square { height: calc( 100vw - 32px ); }
+    #works_list article a.rectangle_hor { height: calc( ( 100vw - 32px ) / 3 * 2 ); }
+    #works_list article a.rectangle_ver { height: calc( ( 100vw - 32px ) / 4 * 5 + 24px ); }
 
-    .works article a.square img { height: 100%; }
-    .works article a.rectangle_hor img { width: 100%; }
-    .works article a.rectangle_ver img { height: 100%; }
+    #works_list article a.square img { height: 100%; }
+    #works_list article a.rectangle_hor img { width: 100%; }
+    #works_list article a.rectangle_ver img { height: 100%; }
 }
 
 
