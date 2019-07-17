@@ -11,9 +11,9 @@ const works = {
                 type: "square" 
             },
             view: {
-                title: "Test",
+                title: '“Give me<br>some sweets<br>or I\'ll trick ya!<br>Gao-!”',
                 date: "2019-07-17",
-                description: "이 설명은 테스트 설명입니다.",
+                description: "‘박쥐 인간 복장을 입은<br>여우 동물 어린이 캐릭터’로,<br>화려한 색과 빛을<br>표현하고자 하였습니다.",
                 image: "https://placehold.it/800x2400"
             }
         },
@@ -119,24 +119,6 @@ const menu = {
 let currentMenu = menu.main;
 let previousMenu;
 
-const menuChange = function(target) {
-    if (target === currentMenu) { return; }
-
-    currentMenu.section.classList.add('opacity0');
-    setTimeout( function() {
-        currentMenu.section.classList.add('displaynone');
-        target.section.classList.remove('displaynone');
-    }, 200);
-    setTimeout( function() {
-        target.section.classList.remove('opacity0');
-    }, 300);
-
-    document.body.classList.remove(currentMenu.bodyStatus);
-    document.body.classList.add(target.bodyStatus);
-
-    setTimeout( function() { currentMenu = target; }, 200);
-}
-
 
 const worksListHeadline = document.querySelector("#works_list .works_headline h2");
 const worksListButtonBack = document.querySelector("#works_list a.button_back");
@@ -180,10 +162,6 @@ const worksListContentsAdd = function(worksListTarget, contents) {
         worksListItem.addEventListener('click', eventListener);
         removeListenerList.push(function() { worksListItem.removeEventListener('click', eventListener); });        
     }
-
-    for(let j = 0; j < worksListTarget.childNodes.length; j++) {
-        worksListTarget.childNodes[j].addEventListener('click', workListRemoveEventListener);
-    }
 }
 
 const contentsChange = function(target, contents) {
@@ -213,6 +191,26 @@ const contentsChange = function(target, contents) {
     }
 }
 
+
+const menuChange = function(target) {
+    if (target === currentMenu) { return; }
+
+    workListRemoveEventListener();
+
+    currentMenu.section.classList.add('opacity0');
+    setTimeout( function() {
+        currentMenu.section.classList.add('displaynone');
+        target.section.classList.remove('displaynone');
+    }, 200);
+    setTimeout( function() {
+        target.section.classList.remove('opacity0');
+    }, 300);
+
+    document.body.classList.remove(currentMenu.bodyStatus);
+    document.body.classList.add(target.bodyStatus);
+
+    setTimeout( function() { currentMenu = target; }, 200);
+}
 
 
 menu.main.link.addEventListener('click', function() { menuChange(menu.main); });
