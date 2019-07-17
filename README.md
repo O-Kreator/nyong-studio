@@ -44,8 +44,8 @@
 
 ## Liscence
 
-이 레포지토리에는 라이센스를 설정하지 않았습니다.<br>
-**즉, 다른 누군가가 소스코드를 자신의 저작물에 직접 사용하는 것을 허용하지 않습니다.**
+Copyright (c) Doro-nyong ALL RIGHTS RESERVED<br>
+**다른 누군가가 소스코드를 자신의 저작물에 직접 사용하는 것을 허용하지 않습니다.**
 
 
 ## Contributing
