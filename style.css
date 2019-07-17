@@ -37,7 +37,7 @@ h1 {
     text-transform: uppercase;
 
     transition-property: font-size, margin, padding;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 @media screen and (min-width: 960px) {
@@ -109,7 +109,12 @@ section.fullscreen {
     min-height: 568px;
 
     transition-property: width, height, padding, font-size;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
+}
+
+section.contents {
+    transition-property: padding, opacity;
+    transition-duration: .2s;
 }
 
 @media screen and (min-width: 720px) {
@@ -129,7 +134,7 @@ section.fullscreen {
         padding: 80px 16px 59px;
     }
 
-    body.status_works section.contents {
+    body.status_works section.contents, body.status_works_view section.contents {
         padding: 0 16px 59px;
     }
 }
@@ -142,7 +147,7 @@ section.fullscreen {
 
 #main {
     transition-property: opacity;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 #main_contact {
@@ -248,7 +253,7 @@ section.fullscreen {
     overflow: hidden;
 
     transition-property: width, height, margin, font-size;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 
@@ -326,7 +331,7 @@ section.fullscreen {
         opacity: 0;
 
         transition-property: opacity;
-        transition-duration: 0.2s;
+        transition-duration: .2s;
     }
 
     #main_menu article a:hover{
@@ -390,6 +395,9 @@ section.fullscreen {
 .works_headline {
     position: relative;
     font-size: 0;
+
+    transition-property: margin, height;
+    transition-duration: .2s;
 }
 
 .works_headline h2 {
@@ -398,6 +406,9 @@ section.fullscreen {
 
     font-weight: bold;
     text-transform: uppercase;
+
+    transition-property: font-size;
+    transition-duration: .2s;
 }
 
 a.button_back {
@@ -481,12 +492,12 @@ a.button_back img {
 
 
 
+/*
+* Section: Works List
+*/
 
 .works {
     overflow: hidden;
-
-    transition-property: opacity;
-    transition-duration: 0.2s;
 }
 
 @media screen and (min-width: 960px) {
@@ -592,6 +603,110 @@ a.button_back img {
 
 
 
+/*
+* Section: Works View
+*/
+
+@media screen and (min-width: 1200px) {
+    #works_view .works_headline {
+        position: fixed;
+    }
+}
+
+
+#works_description {
+    z-index: 2;
+}
+
+#works_description h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition-property: font-size;
+    transition-duration: .2s;
+}
+
+
+@media screen and (min-width: 1200px) {
+    #works_description {
+        position: fixed;
+        top: 166px; left: 232px;
+
+        width: calc( (100% - 48px) / 3 );
+    }
+}
+
+@media screen and (min-width: 480px) {
+    #works_description h2 {
+        position: relative;
+        top: -14px;
+    }
+    
+    #works_description time {
+        position: relative;
+        top: 2px;
+    
+        line-height: 1;
+    }
+    
+    #works_description article {
+        margin-top: 26px;
+        line-height: 2;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #works_description h2 {
+        line-height: 1;
+    }
+
+    #works_description time {
+        position: relative;
+        top: 6px;
+    }
+
+    #works_description article {
+        margin-top: 24px;
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    #works_image {
+        position: absolute;
+        top: 48px; right: 48px;
+        
+        width: calc( 100% - ( 304px + (100% - 48px) / 3 ) );
+        margin-bottom: 48px;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1199px) {
+    #works_image {
+        width: 100%;
+
+        margin-top: 36px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 719px) {
+    #works_image {
+        width: 100%;
+
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #works_image {
+        width: 100%;
+
+        margin-top: 24px;
+    }
+}
+
 
 
 
@@ -601,7 +716,7 @@ a.button_back img {
 
 #about {
     transition-property: opacity;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 
@@ -617,7 +732,7 @@ header {
     top: 0; left: 0;
 
     transition-property: width, height, padding, font-size, top;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 #logo_studio { user-select: none; }
@@ -661,7 +776,7 @@ header {
         width: 32px;
     }
 
-    body.status_works header {
+    body.status_works header, body.status_works_view header {
         top: -65px;
     }
 }
@@ -678,7 +793,7 @@ nav {
     position: fixed;
 
     transition-property: width, height, padding, font-size, top;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 nav a {
@@ -733,7 +848,7 @@ nav a {
         line-height: 2rem;
     }
 
-    body.status_works nav {
+    body.status_works nav, body.status_works_view nav {
         top: -65px;
     }
 }
@@ -754,7 +869,7 @@ footer {
     text-transform: uppercase;
 
     transition-property: width, height, padding, font-size;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 #logo_okreator {
@@ -819,7 +934,7 @@ footer {
 
 div.fill_green, div.fill_pattern {
     transition-property: width, height, margin;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 div.fill_green { background: rgb(166, 222, 96); }
@@ -834,7 +949,7 @@ div.fill_pattern { background-image: url(img/bg_pattern.svg); background-positio
     font-size: 0;
 
     transition-property: opacity;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 
     overflow: hidden;
 }
@@ -853,8 +968,13 @@ body.status_main_menu #background_pc div.fill_green:last-of-type { width: 0; }
 
 body.status_works #background_pc div.fill_green:first-of-type { width: 0; }
 body.status_works #background_pc div.fill_pattern:nth-of-type(2) { width: 64px; margin-right: 100vw; }
-body.status_works #background_pc div.fill_pattern:nth-of-type(3) { width: 0; }
+body.status_works #background_pc div.fill_pattern:nth-of-type(3) { width: 0; margin-left: calc( 100vw - 64px ); }
 body.status_works #background_pc div.fill_green:last-of-type { width: 0; }
+
+body.status_works_view #background_pc div.fill_green:first-of-type { width: 0; }
+body.status_works_view #background_pc div.fill_pattern:nth-of-type(2) { width: 0; }
+body.status_works_view #background_pc div.fill_pattern:nth-of-type(3) { width: 64px; margin-left: calc( 100vw - 64px ); }
+body.status_works_view #background_pc div.fill_green:last-of-type { width: 0; }
 
 body.status_about #background_pc div.fill_green:first-of-type { width: 0; }
 body.status_about #background_pc div.fill_pattern:nth-of-type(2) { width: 0; }
@@ -868,7 +988,7 @@ body.status_about #background_pc div.fill_green:last-of-type { width: calc( 72px
     min-height: 586px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 719px) {
+@media screen and (min-width: 480px) {
     body.status_main_menu #background_mobile div.fill_green:first-of-type { height: calc( 296px + ( 100vh - 408px ) / 6 ); }
     body.status_main_menu #background_mobile div.fill_pattern:nth-of-type(2) { height: 64px; margin-bottom: calc( 100vh - 296px - ( 100vh - 408px ) / 6 ); }
     body.status_main_menu #background_mobile div.fill_pattern:nth-of-type(3) { height: 0; }
@@ -876,8 +996,13 @@ body.status_about #background_pc div.fill_green:last-of-type { width: calc( 72px
 
     body.status_works #background_mobile div.fill_green:first-of-type { height: 0; }
     body.status_works #background_mobile div.fill_pattern:nth-of-type(2) { height: 64px; margin-bottom: 100vh; }
-    body.status_works #background_mobile div.fill_pattern:nth-of-type(3) { height: 0; }
+    body.status_works #background_mobile div.fill_pattern:nth-of-type(3) { height: 0; margin-top: calc( 100vh - 64px ); }
     body.status_works #background_mobile div.fill_green:last-of-type { height: 0; }
+
+    body.status_works_view #background_mobile div.fill_green:first-of-type { height: 0; }
+    body.status_works_view #background_mobile div.fill_pattern:nth-of-type(2) { height: 0; }
+    body.status_works_view #background_mobile div.fill_pattern:nth-of-type(3) { height: 64px; margin-top: calc( 100vh - 64px ); }
+    body.status_works_view #background_mobile div.fill_green:last-of-type { height: 0; }
 
     body.status_about #background_mobile div.fill_green:first-of-type { height: 0; }
     body.status_about #background_mobile div.fill_pattern:nth-of-type(2) { height: 0; }
@@ -893,8 +1018,13 @@ body.status_about #background_pc div.fill_green:last-of-type { width: calc( 72px
 
     body.status_works #background_mobile div.fill_green:first-of-type { height: 0; }
     body.status_works #background_mobile div.fill_pattern:nth-of-type(2) { height: 24px; margin-bottom: 100vh; }
-    body.status_works #background_mobile div.fill_pattern:nth-of-type(3) { height: 0; }
+    body.status_works #background_mobile div.fill_pattern:nth-of-type(3) { height: 0;  margin-top: calc( 100vh - 24px ); }
     body.status_works #background_mobile div.fill_green:last-of-type { height: 0; }
+
+    body.status_works_view #background_mobile div.fill_green:first-of-type { height: 0; }
+    body.status_works_view #background_mobile div.fill_pattern:nth-of-type(2) { height: 0; }
+    body.status_works_view #background_mobile div.fill_pattern:nth-of-type(3) { height: 24px; margin-top: calc( 100vh - 24px ); }
+    body.status_works_view #background_mobile div.fill_green:last-of-type { height: 0; }
 
     body.status_about #background_mobile div.fill_green:first-of-type { height: 0; }
     body.status_about #background_mobile div.fill_pattern:nth-of-type(2) { height: 0; }
