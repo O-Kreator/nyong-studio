@@ -8,7 +8,7 @@ div.fill_green, div.fill_pattern {
 }
 
 div.fill_green { background: rgb(166, 222, 96); }
-div.fill_pattern { background-image: url(/img/bg_pattern.svg); background-position: center center; background-size: 16px 16px; }
+div.fill_pattern { background-image: url(../img/bg_pattern.svg); background-position: center center; background-size: 16px 16px; }
 
 #background_pc, #background_mobile {
     z-index: -1;
