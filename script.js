@@ -195,16 +195,60 @@ const menu = {
 
 
 /*
-* Contact Data
+* Contact Data, and applying.
 */
 
 const contact = {
-    mail: 'doronyong94@gmail.com',
-    twitter: '@doro_nyong_art',
-    discord: 'Doro-nyong#4031',
-    youtube: 'youtube link here',
-    instagram: 'instagram ID here',
-    devian: 'DevianArt ID here'
+    mail: {
+        a: document.getElementsByClassName('link_mail'),
+        value: 'doronyong94@gmail.com',
+        href: 'mailto:doronyong94@gmail.com'
+    },
+    twitter: {
+        a: document.getElementsByClassName('link_twitter'),
+        value: '@doro_nyong_art',
+        href: 'https://twitter.com/doro_nyong_art'
+    },
+    discord: {
+        a: document.getElementsByClassName('link_discord'),
+        value: 'Doro-nyong#4031',
+        href: null
+    },
+    youtube: {
+        a: document.getElementsByClassName('link_youtube'),
+        value: 'youtube here',
+        href: null
+    },
+    instagram: {
+        a: document.getElementsByClassName('link_instagram'),
+        value: 'instagram here',
+        href: null
+    },
+    devian: {
+        a: document.getElementsByClassName('link_devian'),
+        value: 'devian here',
+        href: null
+    }
+}
+
+const contactList = Object.keys(contact);
+
+for( let i = 0; i < contactList.length; i++ ) {
+    let anchor = contact[contactList[i]].a;
+    let value = contact[contactList[i]].value;
+    let href = contact[contactList[i]].href;
+
+    anchor[anchor.length - 1].innerHTML = value;
+
+    if( href !== null ) {
+        for( let j = 0; j < anchor.length; j++ ) {
+            anchor[j].setAttribute('href', href);
+        }
+    } else {
+        for( let j = 0; j < anchor.length; j++ ) {
+            anchor[j].removeAttribute('href');
+        }
+    }
 }
 
 
