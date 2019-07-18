@@ -14,7 +14,7 @@ const works = {
                 title: '“Give me<br>some sweets<br>or I\'ll trick ya!<br>Gao-!”',
                 date: '2019-07-17',
                 description: '‘박쥐 인간 복장을 입은<br>여우 동물 어린이 캐릭터’로,<br>화려한 색과 빛을<br>표현하고자 하였습니다.',
-                image: 'https://placehold.it/800x2400'
+                image: 'https://placehold.it/2400x1800'
             }
         },
         {
@@ -195,6 +195,21 @@ const menu = {
 
 
 /*
+* Contact Data
+*/
+
+const contact = {
+    mail: 'doronyong94@gmail.com',
+    twitter: '@doro_nyong_art',
+    discord: 'Doro-nyong#4031',
+    youtube: 'youtube link here',
+    instagram: 'instagram ID here',
+    devian: 'DevianArt ID here'
+}
+
+
+
+/*
 * SPA
 */
 
@@ -225,6 +240,8 @@ const workListRemoveEventListener = function() {
     this.removeEventListener('click', workListRemoveEventListener);
     removeListenerList = [];
 }
+
+
 
 const worksListContentsAdd = function(worksListTarget, contents) {
     const worksListItemEventListener = function(i) {
@@ -342,10 +359,19 @@ menu.about.link.addEventListener('click', function() { menuChange(menu.about); }
 
 worksListButtonBack.addEventListener('click', function() { menuChange(menu.main); });
 worksListWideButtonBack.addEventListener('click', function() { menuChange(menu.main); });
-worksViewButtonBack.addEventListener('click', function() { menuChange(previousWorksList); contentsChange(previousWorksListTarget, previousMenu); });
 
-menu.worksList.link[0].addEventListener('click', function() {menuChange(menu.worksList); contentsChange('worksList', menu.worksList.contents[0]); });
-menu.worksList.link[1].addEventListener('click', function() {menuChange(menu.worksList); contentsChange('worksList', menu.worksList.contents[1]); });
-menu.worksListWide.link.addEventListener('click', function() {menuChange(menu.worksListWide); contentsChange('worksListWide', menu.worksListWide.contents[0]); });
+worksViewButtonBack.addEventListener('click', function() {
+    menuChange(previousWorksList);
+    contentsChange(previousWorksListTarget, previousMenu);
+});
 
-// menu.worksList.link.forEach(function(item, index) {item.addEventListener('click', function() { menuChange(menu.worksList); contentsChange('worksList', menu.worksList.contents[index]); });});
+menu.worksList.link.forEach(function(item, index) {
+    item.addEventListener('click', function() {menuChange(menu.worksList);
+        contentsChange('worksList', menu.worksList.contents[index]);
+    });
+});
+menu.worksListWide.link.addEventListener('click', function() {
+    menuChange(menu.worksListWide);
+    contentsChange('worksListWide', menu.worksListWide.contents[0]
+    );
+});
