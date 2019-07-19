@@ -42,6 +42,14 @@
 * **Doro-nyong** - Director, Designer, Publisher, Front-end. All of them!
 
 
+## Thanks to
+
+* **[RanolP](https://github.com/RanolP)** - 꾸준한 코드 리뷰 감사합니다.
+* **[Danuel](https://github.com/Danue1)** - 꾸준한 코드 리뷰 감사합니다.
+* **[SDSkyKlouD](https://github.com/SDSkyKlouD)** - PR 감사합니다.
+* **[x86chi](https://github.com/x86chi)** - PR 및 이슈 감사합니다.
+
+
 ## Liscence
 
 Copyright (c) Doro-nyong ALL RIGHTS RESERVED<br>
