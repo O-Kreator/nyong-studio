@@ -33,21 +33,6 @@ let previousMenu;
 let previousWorksList;
 let previousWorksListTarget;
 
-const worksListHeadline = document.querySelector('#works_list .works_headline h2');
-const worksListButtonBack = document.querySelector('#works_list a.button_back');
-const worksListLeft = document.querySelector('#works_list article:first-of-type');
-const worksListRight = document.querySelector('#works_list article:last-of-type');
-
-const worksListWideHeadline = document.querySelector('#works_list_wide .works_headline h2');
-const worksListWideButtonBack = document.querySelector('#works_list_wide a.button_back');
-const worksListWideTarget = document.querySelector('#works_list_wide article');
-
-const worksViewButtonBack = document.querySelector('#works_view a.button_back');
-const worksViewTitle = document.querySelector('#works_description h2');
-const worksViewDate = document.querySelector('#works_description time');
-const worksViewDescription = document.querySelector('#works_description article');
-const worksViewImage = document.querySelector('#works_image');
-
 let removeListenerList = [];
 
 const workListRemoveEventListener = function() {
@@ -55,8 +40,6 @@ const workListRemoveEventListener = function() {
     this.removeEventListener('click', workListRemoveEventListener);
     removeListenerList = [];
 }
-
-
 
 const worksListContentsAdd = function(worksListTarget, contents) {
     const worksListItemEventListener = function(i) {
