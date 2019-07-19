@@ -201,8 +201,8 @@ const menu = {
 const contact = {
     mail: {
         a: document.getElementsByClassName('link_mail'),
-        value: 'doronyong94@gmail.com',
-        href: 'mailto:doronyong94@gmail.com'
+        value: 'doro' + 'nyong' + '94' + '\u0040' + 'gmail' + '.com',
+        href: 'mailto' + ':doro' + 'nyong' + '94' + '\u0040' + 'gmail' + '.com'
     },
     twitter: {
         a: document.getElementsByClassName('link_twitter'),
