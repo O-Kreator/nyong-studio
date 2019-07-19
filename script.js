@@ -337,6 +337,9 @@ const worksListWideContentsAdd = function(contents) {
 }
 
 const contentsChange = function(target, contents) {
+	if (!target.match(/^works(?:List|ListWide|View|)$/))
+		return console.error('Error! param of contentsChange: target \'' + target + '\' is not the right type.');
+	
     if ( target === 'worksList' ) {
         worksListHeadline.innerHTML = contents.title;
 
@@ -352,8 +355,9 @@ const contentsChange = function(target, contents) {
         previousMenu = contents;
         previousWorksList = menu.worksList;
         previousWorksListTarget = target;
-
-    } else if ( target === 'worksListWide' ) {
+	}
+	
+	if ( target === 'worksListWide' ) {
         worksListWideHeadline.innerHTML = contents.title;
 
         worksListWideTarget.innerHTML = '';
@@ -363,18 +367,15 @@ const contentsChange = function(target, contents) {
         previousMenu = contents;
         previousWorksList = menu.worksListWide;
         previousWorksListTarget = target;
-
-    } else if ( target === 'worksView' ) {
+	}
+	
+	if ( target === 'worksView' ) {
         worksViewTitle.innerHTML = contents.view.title;
         worksViewDate.innerHTML = contents.view.date;
         worksViewDescription.innerHTML = contents.view.description;
 
         worksViewImage.setAttribute('src', contents.view.image);
-
-    } else {
-        console.error("Error! param of contentsChange: target '" + target + "' is not the right type.");
-
-    }
+	}
 }
 
 const menuChange = function(target) {
