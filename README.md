@@ -50,7 +50,7 @@
 * **[x86chi](https://github.com/x86chi)** - PR 및 이슈 감사합니다.
 
 
-## Liscence
+## License
 
 Copyright (c) Doro-nyong ALL RIGHTS RESERVED<br>
 **다른 누군가가 소스코드를 자신의 저작물에 직접 사용하는 것을 허용하지 않습니다.**
