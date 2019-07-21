@@ -1,3 +1,22 @@
+import { menu } from './data.js';
+import { contact } from './data.js';
+
+import { worksListHeadline } from './data.js';
+import { worksListButtonBack } from './data.js';
+import { worksListLeft } from './data.js';
+import { worksListRight } from './data.js';
+
+import { worksListWideHeadline } from './data.js';
+import { worksListWideButtonBack } from './data.js';
+import { worksListWideTarget } from './data.js';
+
+import { worksViewButtonBack } from './data.js';
+import { worksViewTitle } from './data.js';
+import { worksViewDate } from './data.js';
+import { worksViewDescription } from './data.js';
+import { worksViewImage } from './data.js';
+
+
 /*
 * Applying contact data
 */

@@ -1,0 +1,30 @@
+{
+  "name": "nyong-studio",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r <img src=\"img/logo_studio_withtypo.svg\" width=\"180\"><br><br>\r 개인 아티스트 브랜드 '도로뇽'의 웹 사이트, '뇽 스튜디오'의 소스코드입니다.\r <br><br>\r <img src=\"https://img.shields.io/github/stars/Doro-nyong/nyong-studio.svg?style=flat-square\">\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "devserver": "webpack-dev-server --open --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doro-nyong/nyong-studio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Doro-nyong/nyong-studio/issues"
+  },
+  "homepage": "https://github.com/Doro-nyong/nyong-studio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

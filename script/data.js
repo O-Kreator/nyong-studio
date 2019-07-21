@@ -142,7 +142,7 @@ const works = {
 * Menu Data
 */
 
-const menu = {
+export const menu = {
     main: {
         link: document.getElementById('menu_main'),
         section: document.getElementById('main'),
@@ -198,7 +198,7 @@ const menu = {
 * Contact Data
 */
 
-const contact = {
+export const contact = {
     mail: {
         a: document.getElementsByClassName('link_mail'),
         value: 'doro' + 'nyong' + '94' + '\u0040' + 'gmail' + '.com',
@@ -237,17 +237,17 @@ const contact = {
 * DOM
 */
 
-const worksListHeadline = document.querySelector('#works_list .works_headline h2');
-const worksListButtonBack = document.querySelector('#works_list a.button_back');
-const worksListLeft = document.querySelector('#works_list article:first-of-type');
-const worksListRight = document.querySelector('#works_list article:last-of-type');
+export const worksListHeadline = document.querySelector('#works_list .works_headline h2');
+export const worksListButtonBack = document.querySelector('#works_list a.button_back');
+export const worksListLeft = document.querySelector('#works_list article:first-of-type');
+export const worksListRight = document.querySelector('#works_list article:last-of-type');
 
-const worksListWideHeadline = document.querySelector('#works_list_wide .works_headline h2');
-const worksListWideButtonBack = document.querySelector('#works_list_wide a.button_back');
-const worksListWideTarget = document.querySelector('#works_list_wide article');
+export const worksListWideHeadline = document.querySelector('#works_list_wide .works_headline h2');
+export const worksListWideButtonBack = document.querySelector('#works_list_wide a.button_back');
+export const worksListWideTarget = document.querySelector('#works_list_wide article');
 
-const worksViewButtonBack = document.querySelector('#works_view a.button_back');
-const worksViewTitle = document.querySelector('#works_description h2');
-const worksViewDate = document.querySelector('#works_description time');
-const worksViewDescription = document.querySelector('#works_description article');
-const worksViewImage = document.querySelector('#works_image');
+export const worksViewButtonBack = document.querySelector('#works_view a.button_back');
+export const worksViewTitle = document.querySelector('#works_description h2');
+export const worksViewDate = document.querySelector('#works_description time');
+export const worksViewDescription = document.querySelector('#works_description article');
+export const worksViewImage = document.querySelector('#works_image');

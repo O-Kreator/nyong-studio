@@ -13,3 +13,7 @@
 .history
 
 # End of https://www.gitignore.io/api/visualstudiocode
+
+### Node Modules ###
+node_modules
+webpack.config.js
