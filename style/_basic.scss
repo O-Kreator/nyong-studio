@@ -1,0 +1,57 @@
+@import 'variables';
+
+/*
+*
+* Tag Setting
+*
+*/
+
+* { box-sizing: border-box; }
+
+html, body {
+    font-family: "effra", "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    @include only-under-small { font-size: 14px; }
+
+    line-height: 1.2;
+}
+
+em { font-weight: bold; }
+img { user-select: none; }
+
+
+
+/*
+*
+* Basic Classes
+*
+*/
+
+img {
+    &.mail { width: 20px; }
+    &.twitter { width: 20px; }
+    &.discord { width: 18px; }
+    &.youtube { width: 20px; }
+    &.instagram { width: 20px; }
+    &.devian { width: 12px; }
+}
+
+.displaynone { display: none; }
+.opacity0 { opacity: 0; }
+
+.fullscreen {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+
+    transition-property: padding, opacity;
+    transition-duration: $transition-time;
+
+    @include only-over-large { padding: 45px 45px 45px calc( 45px + #{$grid-column} ); }
+    @include only-large { padding: 45px 45px 45px 170px; }
+    @include only-medium { padding: 128px 32px 88px 32px; }
+    @include only-small { padding: 128px 32px 88px 32px; }
+    @include only-under-small { padding: 80px 16px 62px 16px; }
+
+    @include only-under-small-height { min-height: 568px; }
+}

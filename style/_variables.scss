@@ -1,3 +1,25 @@
+/*
+*
+* Global Variables
+*
+*/
+
+$primary-color: rgb(166, 222, 96);
+$primary-color-alpha: rgba(166, 222, 96, .75);
+$text-color: rgb(0, 0, 0);
+$transition-time: .2s;
+
+$grid-gutter: 30px;
+$grid-column: calc( ( 100vw - 420px ) / 12 );
+
+
+
+/*
+*
+* Breakpoints of Media Queries, and related mixins
+*
+*/
+
 $width-breakpoints: (
     'under-small' : 'max-width: 479px',
     'over-small'  : 'min-width: 480px',

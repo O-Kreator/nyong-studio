@@ -1,0 +1,40 @@
+@import 'variables';
+
+/*
+*
+* Background
+*
+*/
+
+%background-pattern {
+    background-image: url('./../img/bg_pattern.svg');
+    background-position: center center;
+    background-size: 16px;
+}
+
+@mixin when-status($selector) {
+    body#{$selector} & {
+        @content;
+    }
+}
+
+#background {
+    z-index: -1;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    div {
+        transition-property: height, margin;
+        transition-duration: $transition-time;
+    }
+
+    .fill_green { background-color: $primary-color; }
+    .fill_pattern { height: 48px; @extend %background-pattern; }
+
+    @include when-status('.status_index') {
+        .fill_green:first-of-type { height: calc( 100% / 5 * 4 ) ; }
+        .fill_pattern:nth-of-type(2) { margin-bottom: calc( 100% / 5 * 1  - 48px ) ; }
+        .fill_pattern:nth-of-type(3) { height: 0; }
+        .fill-green:last-of-type { height: 0; }
+    }
+}

@@ -1,0 +1,48 @@
+@import 'variables';
+
+/*
+*
+* Footer
+*
+*/
+
+body > footer {
+    position: fixed;
+    left: 45px; bottom: 45px;
+
+    transition-property: left, right, bottom;
+    transition-duration: $transition-time;
+
+    @include only-medium { left: 32px; bottom: 32px; right: 32px; }
+    @include only-small { left: 32px; bottom: 32px; right: 32px; }
+    @include only-under-small { left: 16px; bottom: 16px; right: 16px; }
+
+    img {
+        width: 24px;
+    
+        @include only-medium {
+            position: absolute;
+            right: 0; bottom: 0;
+        }
+
+        @include only-small {
+            position: absolute;
+            right: 0; bottom: 0;
+        }
+
+        @include only-under-small {
+            position: absolute;
+            right: 0; bottom: 0;
+        }
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 1.5;
+        text-transform: uppercase;
+
+        @include only-over-large { margin-top: 4px; }
+        @include only-large { margin-top: 4px; }
+        
+    }
+}

@@ -1,0 +1,37 @@
+@import 'variables';
+
+/*
+*
+* Header
+*
+*/
+
+body > header {
+    position: fixed;
+
+    top: 45px; left: 45px;
+
+    transition-property: top, left;
+    transition-duration: $transition-time;
+
+    img {
+        width: 80px;
+        transition-property: width;
+        transition-duration: $transition-time;
+    }
+
+    @include only-medium {
+        top: 32px; left: 32px;
+        img { width: 64px; }
+    }
+
+    @include only-small {
+        top: 32px; left: 32px;
+        img { width: 64px; }
+    }
+
+    @include only-under-small {
+        top: 16px; left: 16px;
+        img { width: 48px; }
+    }
+}

@@ -1,0 +1,389 @@
+@import 'variables';
+
+/*
+*
+* Section: Index
+*
+*/
+
+#index {
+
+    transition-property: padding, opacity;
+    transition-duration: $transition-time;
+
+    & > header {
+        height: 0;
+    }
+
+    article {
+        @include only-over-large {
+            width: calc(#{$grid-column} * 3 + #{$grid-gutter} * 3);
+            margin-top: calc( 260px - 4.5vw );
+
+            font-size: 0.8vw;
+
+            @media (min-width: 1920px) {
+                margin-top: 210px;
+                font-size: 16px;
+            }
+        }
+
+        @include only-large {
+            position: absolute;
+            top: 46px; left: 170px; right: 45px; bottom: 45px;
+            margin-top: 111px;
+        }
+    }
+
+    h1 {
+        position: relative;
+        font-weight: bold;
+
+        transition-property: font-size, top;
+        transition-duration: $transition-time;
+
+        @include only-over-large {
+            top: -20px;
+            font-size: 4.5em;
+        }
+
+        @include only-large {
+            font-size: 2.5rem;
+        }
+
+        @include only-medium {
+            font-size: 2.5rem;
+        }
+
+        @include only-small {
+            font-size: 2.5rem;
+        }
+
+        @include only-under-small {
+            font-size: 2rem;
+        }
+    }
+
+    hr {
+        display: none;
+        position: relative;
+        
+        margin: 12px 0 32px;
+    
+        border: 0; border-top: 1px solid $text-color;
+
+        @include only-over-large {
+            display: block;
+            left: calc(-1 * ( #{$grid-column} * 3 + #{$grid-gutter} * 3 ));
+
+            width: calc(100% + #{$grid-column} * 3 + #{$grid-gutter} * 4);
+            margin: 12px 0 32px;
+        }
+    }
+
+    h3 {
+        transition-property: font-size, margin;
+        transition-duration: $transition-time;
+
+        @include only-over-large {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        @include only-large {
+            margin: 12px 0;
+        }
+
+        @include only-medium {
+            margin: 12px 0;
+        }
+
+        @include only-small {
+            margin: 12px 0;
+        }
+
+        @include only-under-small {
+            margin: 8px 0 6px;
+        }
+    }
+    
+    h2 {
+        transition-property: font-size;
+        transition-duration: $transition-time;
+
+        @include only-over-large {
+            font-size: 2em;
+        }
+
+        @include only-large {
+            font-size: 1.25rem;
+        }
+
+        @include only-medium {
+            font-size: 1.25rem;
+        }
+
+        @include only-small {
+            font-size: 1.25rem;
+        }
+
+        @include only-under-small {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+#button_about {
+    font-size: 0;
+    line-height: 0;
+
+    img {
+        position: fixed;
+        box-sizing: content-box;
+        left: 158px; top: 50px;
+    
+        width: 48px;
+        padding: 12px;
+
+        transition-property: left, top, width;
+        transition-duration: $transition-time;
+
+        @include only-medium {
+            left: 116px; top: 36px;
+            width: 32px;
+        }
+
+        @include only-small {
+            left: 116px; top: 36px;
+            width: 32px;
+        }
+
+        @include only-under-small {
+            left: 64px; top: 16px;
+            width: 24px;
+        }
+    }
+}
+
+
+#contact_index {
+    font-size: 0;
+    margin-top: 32px;
+
+    ul li {
+        display: inline-block;
+        img {
+            box-sizing: content-box;
+            padding: 12px;
+
+            @include only-under-small {
+                padding: 8px;
+            }
+        }
+    }
+
+    @include only-over-large {
+        position: relative;
+        top: -12px; left: -12px;
+    }
+
+    @include only-large {
+        position: fixed;
+        top: 36px; right: 36px;
+    }
+
+    @include only-medium {
+        position: fixed;
+        top: 8px; right: 20px;
+    }
+
+    @include only-small {
+        position: fixed;
+        top: 8px; right: 20px;
+    }
+
+    @include only-under-small {
+        position: fixed;
+        top: -8px; right: 6px;
+    }
+}
+
+
+#works_menu {
+    transition-property: top, left, right, bottom;
+    transition-duration: $transition-time;
+
+    @include only-over-large {
+        position: absolute;
+        top: 0; bottom: 0; right: 45px; 
+        width: calc(#{$grid-column} * 8 + #{$grid-gutter} * 7);
+    }
+
+    @include only-large {
+        position: absolute;
+        top: 344px; left: 170px; right: 45px; bottom: 45px;
+    }
+
+    @include only-medium {
+        position: absolute;
+        top: 312px; left: 32px; right: 32px; bottom: 88px;
+    }
+
+    @include only-small {
+        position: absolute;
+        top: 312px; left: 32px; right: 32px; bottom: 88px;
+    }
+
+    @include only-under-small {
+        position: absolute;
+        top: 236px; left: 16px; right: 16px; bottom: 62px;
+    }
+
+    ul {
+        height: 100%;
+    }
+
+    li {
+        position: relative;
+
+        font-size: 1.25rem;
+        text-align: center;
+
+        background-image: url('https://placehold.it/800x800');
+        &:hover a { background: $primary-color-alpha; }
+        &:hover div { opacity: 1; }
+        background-size: cover;
+        background-position: center center;
+
+        @include only-over-large {
+            height: calc( (100% - 48px) / 3 );
+            margin-top: 24px;
+            &:first-of-type { margin-top: 0; }
+        }
+
+        @include only-large {
+            height: calc( (100% - 24px) / 3 );
+            margin-top: 12px;
+            &:first-of-type { margin-top: 0; }
+        }
+
+        @include only-medium {
+            height: calc( (100% - 24px) / 3 );
+            margin-top: 12px;
+            &:first-of-type { margin-top: 0; }
+        }
+
+        @include only-small {
+            height: calc( (100% - 16px) / 3 );
+            margin-top: 8px;
+            &:first-of-type { margin-top: 0; }
+        }
+
+        @include only-under-small {
+            height: calc( (100% - 16px) / 3 );
+            margin-top: 8px;
+            &:first-of-type { margin-top: 0; }
+        }
+
+        a {
+            position: absolute;
+            display: block;
+    
+            text-decoration: none;
+            color: $text-color;
+
+            transition-property: background;
+            transition-duration: $transition-time;
+
+            top: 0; left: 0; right: 0; bottom: 0;
+
+            div {
+                position: absolute;
+                
+                transition-property: opacity;
+                transition-duration: $transition-time;
+
+                @include only-over-large {
+                    top: 50%; left: 50%;
+                    transform: translate( calc(-50% - .5px),  calc(-50% - .5px) );
+                    opacity: 0;
+                }
+    
+                @include only-large {
+                    top: 50%; left: 50%;
+                    transform: translate( calc(-50% - .5px),  calc(-50% - .5px) );
+                    opacity: 0;
+                }
+
+                @include only-medium {
+                    top: 50%; left: 50%;
+                    transform: translate( calc(-50% - .5px),  calc(-50% - .5px) );
+                    opacity: 0;
+                }
+
+                @include only-small {
+                    top: 50%; left: 0;
+                    transform: translateY( calc(-50% - .5px) );
+
+                    background: $primary-color-alpha;
+                    opacity: 1;
+                }
+
+                @include only-under-small {
+                    top: 50%; left: 0;
+                    transform: translateY( calc(-50% - .5px) );
+
+                    background: $primary-color-alpha;
+                    opacity: 1;
+                }
+                
+
+                h2 {
+                    display: inline-block;
+                    
+                    height: 31px;
+                    
+                    padding: 0 3px;
+                    
+                    font-size: 2rem;
+                    font-weight: bold;
+                    line-height: 28px;
+                    text-transform: uppercase;
+                
+                    border: 1px solid black;
+
+                    @include only-over-large {
+                        margin-bottom: 12px;
+                    }
+
+                    @include only-small {
+                        height: 22px;
+
+                        font-size: 1.2rem;
+                        line-height: 1;
+                        
+                        border: 0;
+                    }
+
+                    @include only-under-small {
+                        height: 20px;
+
+                        font-size: 1.2rem;
+                        line-height: 1;
+                        
+                        border: 0;
+                    }
+                }
+        
+                p {
+                    display: none;
+                    line-height: 1.5;
+
+                    @include only-over-large {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
