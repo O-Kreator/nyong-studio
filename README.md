@@ -7,21 +7,29 @@
 
 ## Features
 
-* SPA(Single Page Application)
+* SPA(Single Page Application) made with MVC pattern
 * Image Gallery made automatically with JavaScript
-* A lot of ugly CSS to style its look pretty
+* A lot of ugly Scss to style its look pretty
 
 
 ## Built With
 
 * HTML5
-* CSS3 - 향후 Scss로 변경 예정.
-* Vanila JavaScript - 되도록이면 ES5를 사용해 IE와 호환하는 것을 목표로 함.
+* Scss
+* Vanila JavaScript
+* Parcel
 
 
 ## Updates
 
-* 0.0.3
+* 0.1.1
+    * add: index section
+    * refactor: modulate Scss
+* 0.1.0
+    * **Redesigned, Rewrited Everything!**
+    * add: Parcel and Scss
+    * chore: apply basic MVC model, ready for re-markup
+* 0.0.3 
     * add: function erasing event listeners of works' list
     * add: style of works' view page
     * fix: make removing events global
@@ -48,6 +56,7 @@
 * **[Danuel](https://github.com/Danue1)** - 꾸준한 코드 리뷰 감사합니다.
 * **[SDSkyKlouD](https://github.com/SDSkyKlouD)** - PR 감사합니다.
 * **[x86chi](https://github.com/x86chi)** - PR 및 이슈 감사합니다.
+* **[Alex4386](https://github.com/Alex4386)** - PR 감사합니다.
 
 
 ## License
