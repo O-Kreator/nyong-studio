@@ -3,7 +3,9 @@
   "version": "0.0.3",
   "description": "개인 아티스트 브랜드 '도로뇽'의 웹 사이트, '뇽 스튜디오'.",
   "main": "webpack.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "sass": "^1.22.7"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

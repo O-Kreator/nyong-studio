@@ -1,0 +1,89 @@
+$width-breakpoints: (
+    'under-small' : 'max-width: 479px',
+    'over-small'  : 'min-width: 480px',
+
+    'under-medium': 'max-width: 719px',
+    'over-medium' : 'min-width: 720px',
+
+    'under-large' : 'max-width: 959px',
+    'over-large'  : 'min-width: 960px',
+
+    'under-huge'  : 'max-width: 1199px',
+    'over-huge'   : 'min-width: 1200px'
+);
+
+$height-breakpoints: (
+    'under-small' : 'max-height: 568px',
+    'over-small'  : 'min-height: 569px'
+);
+
+@function get-breakpoints($width-or-height, $breakpoint) {
+    @if ( $width-or-height == 'width' ) {
+        $width-breakpoint-value: map-get($width-breakpoints, $breakpoint);
+        $width-breakpoint-string: unquote($width-breakpoint-value);
+    
+        @return $width-breakpoint-string;
+    }
+    @else if ( $width-or-height == 'height' ) {
+        $height-breakpoint-value: map-get($height-breakpoints, $breakpoint);
+        $height-breakpoint-string: unquote($height-breakpoint-value);
+    
+        @return $height-breakpoint-string;
+    }
+    @else {
+        @error #{$width-or-height} + 'is No vaild value.';
+    }
+}
+
+@mixin only-under-small {
+    $under-small-px: get-breakpoints('width', 'under-small');
+    @media ( #{$under-small-px} ) { & { @content; } }
+}
+
+@mixin only-small {
+    $over-small-px: get-breakpoints('width', 'over-small');
+    $under-medium-px: get-breakpoints('width', 'under-medium');
+    @media ( #{$over-small-px} ) and ( #{$under-medium-px} ) { & { @content; } }
+}
+
+@mixin only-medium {
+    $over-medium-px: get-breakpoints('width', 'over-medium');
+    $under-large-px: get-breakpoints('width', 'under-large');
+    @media ( #{$over-medium-px} ) and ( #{$under-large-px} ) { & { @content; } }
+}
+
+@mixin only-over-medium {
+    $over-medium-px: get-breakpoints('width', 'over-medium');
+    @media ( #{$over-medium-px} ) { & { @content; } };
+}
+
+@mixin only-large {
+    $over-large-px: get-breakpoints('width', 'over-large');
+    $under-huge-px: get-breakpoints('width', 'under-huge');
+    @media ( #{$over-large-px} ) and ( #{$under-huge-px} ){ & { @content; } }
+}
+
+@mixin only-over-large {
+    $over-huge-px: get-breakpoints('width', 'over-huge');
+    @media ( #{$over-huge-px} ) { & { @content; } }
+}
+
+.only-over-huge    { @media ( get-breakpoints('width', 'under-huge') ) { display: none; } }
+.only-under-huge   { @media ( get-breakpoints('width', 'over-huge') ) { display: none; } }
+.only-over-large   { @media ( get-breakpoints('width', 'under-large') ) { display: none; } }
+.only-under-large  { @media ( get-breakpoints('width', 'over-large') ) { display: none; } }
+.only-over-medium  { @media ( get-breakpoints('width', 'under-medium') ) { display: none; } }
+.only-under-medium { @media ( get-breakpoints('width', 'over-medium') ) { display: none; } }
+.only-over-small   { @media ( get-breakpoints('width', 'under-small') ) { display: none; } }
+.only-under-small  { @media ( get-breakpoints('width', 'over-small') ) { display: none; } }
+
+
+@mixin only-under-small-height {
+    $under-small-px: get-breakpoints('height', 'under-small');
+    @media ( #{$under-small-px} ) { & { @content; } }
+}
+
+@mixin only-over-small-height {
+    $over-small-px: get-breakpoints('height', 'over-small');
+    @media ( #{$over-small-px} ) { & { @content; } }
+}
