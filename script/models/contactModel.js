@@ -33,11 +33,6 @@ export default {
             value: 'devian here',
             isShownInIndex: true
         }
-    },
-
-    list() {
-        return Promise.resolve(
-            this.data
-        );
     }
+
 }

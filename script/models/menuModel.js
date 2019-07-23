@@ -47,11 +47,6 @@ export default {
             section: 'works_view',
             bodyStatus: 'works_view'
         }
-    },
-
-    list() {
-        return Promise.resolve(
-            this.data
-        );
     }
+    
 }

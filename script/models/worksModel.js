@@ -135,11 +135,6 @@ export default {
                 }
             }
         ]
-    },
-
-    list() {
-        return Promise.resolve(
-            this.data
-        );
     }
+    
 }
