@@ -1,3 +1,5 @@
+import iconAbout from './../../img/icon_about.svg'
+
 export default {
 
     data: {
@@ -6,6 +8,8 @@ export default {
             id: 'index',
             isFullscreen: true
         },
+
+        iconAbout: iconAbout,
 
         catchphrase: `Dreaming<span class="only-over-huge"><br></span>
                       freshly<span class="only-under-huge"><br></span>
