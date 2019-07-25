@@ -1,3 +1,8 @@
+import '../style/style.scss'
+
+
+
+/*
 import IndexModel from './models/indexModel'
 import ContactModel from './models/contactModel'
 
@@ -31,3 +36,4 @@ Controller.Index.worksMenu = function() {
 }
 
 Controller.Index.header().article().worksMenu();
+*/

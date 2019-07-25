@@ -1,14 +1,33 @@
 {
   "name": "nyong-studio",
-  "version": "0.0.3",
+  "version": "0.1.2",
   "description": "개인 아티스트 브랜드 '도로뇽'의 웹 사이트, '뇽 스튜디오'.",
   "main": "webpack.config.js",
   "dependencies": {
     "sass": "^1.22.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "resolve-url-loader": "^3.1.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.0",
+    "svg-url-loader": "^3.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "webpack --watch", 
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
