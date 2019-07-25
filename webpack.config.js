@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
 
   mode: 'development',
@@ -47,7 +45,7 @@ module.exports = {
         },
         {
             // IMAGE LOADER
-            test: /\.(png|jpg)$/,
+            test: /\.(png|jpg|svg)$/,
             use: {
                 loader: 'url-loader',
                 options: { 
@@ -56,17 +54,6 @@ module.exports = {
                 } 
             }
         },
-        {
-            // SVG LOADER
-            test: /\.svg$/,
-            use: {
-                loader: 'file-loader',
-                options: {
-                    name: 'img/[name].[ext]?[hash]'
-                }
-            }
-        },
-
         {
             // HTML LOADER
             test: /\.(html)$/,
@@ -81,19 +68,6 @@ module.exports = {
     contentBase: path.join(__dirname, "./dist/"),
     port: 9000
   },
-
-  plugins: [
-    new HtmlWebpackPlugin({
-        title: 'Nyong Studio',
-        /*
-        minify: {
-            collapseWhitespace: true
-        },
-        */
-        hash: true,
-        template: './index.html'
-    })
-  ],
 
   optimization: {},
 
