@@ -18,23 +18,88 @@
     }
 }
 
-#background {
-    z-index: -1;
+#background_pc, #background_mobile {
+    z-index: -10;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
+
+    font-size: 0;
+    overflow: hidden;
+
+    transition-property: opacity;
+    transition-duration: $transition-time;
+
+    .fill_green   { background-color: $primary-color; }
+    .fill_pattern { @extend %background-pattern; }
+}
+
+
+
+/*
+*
+* Background : PC
+*
+*/
+
+#background_pc {
+    .fill_pattern { width: 64px; }
+
+    div {
+        display: inline-block;
+        height: 100%;
+
+        transition-property: width, margin;
+        transition-duration: $transition-time;
+    }
+
+    opacity: 1;
+    @include only-small       { opacity: 0; }
+    @include only-under-small { opacity: 0; }
+
+    @include when-status('.status_about') {
+        div.fill_green:first-of-type    { width: 0; }
+        div.fill_pattern:nth-of-type(2) { width: 0; }
+        div.fill_pattern:nth-of-type(3) { margin-left: 50% }
+        div.fill_green:nth-of-type(4)   { width: calc(50% - 64px); }
+    }
+}
+
+
+
+/*
+*
+* Background : Mobile
+*
+*/
+
+#background_mobile {
+    
+    .fill_pattern {
+        height: 64px;
+        @include only-under-small { height: 32px }
+    }
 
     div {
         transition-property: height, margin;
         transition-duration: $transition-time;
     }
 
-    .fill_green { background-color: $primary-color; }
-    .fill_pattern { height: 48px; @extend %background-pattern; }
+    opacity: 0;
+    @include only-small       { opacity: 1; }
+    @include only-under-small { opacity: 1; }
 
-    @include when-status('.status_index') {
-        .fill_green:first-of-type { height: calc( 100% / 5 * 4 ) ; }
-        .fill_pattern:nth-of-type(2) { margin-bottom: calc( 100% / 5 * 1  - 48px ) ; }
-        .fill_pattern:nth-of-type(3) { height: 0; }
-        .fill-green:last-of-type { height: 0; }
+    @include when-status('.status_about') {
+        @include only-small {
+            div.fill_green:first-of-type    { height: 296px; }
+            div.fill_pattern:nth-of-type(2) { margin-bottom: calc( 100vh - 360px ); }
+            div.fill_pattern:nth-of-type(3) { height: 0; }
+            div.fill_green:nth-of-type(4)   { height: 0; }
+        }
+        @include only-under-small {
+            div.fill_green:first-of-type    { height: 176px; }
+            div.fill_pattern:nth-of-type(2) { margin-bottom: calc( 100vh - 208px ); }
+            div.fill_pattern:nth-of-type(3) { height: 0; }
+            div.fill_green:nth-of-type(4)   { height: 0; }
+        }
     }
 }

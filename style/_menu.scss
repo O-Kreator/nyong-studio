@@ -1,0 +1,46 @@
+@import 'variables';
+
+/*
+*
+* Menu
+*
+*/
+
+#menu {
+    position: absolute;
+
+    top: 0;
+    @include only-over-medium { left: 206px; }
+    @include only-medium      { left: 146px; }
+    @include only-small       { position: fixed; left: 146px; }
+    @include only-under-small { position: fixed; right: 6px; }
+
+    transition-property: left, right;
+    transition-duration: $transition-time;
+
+    ul { font-size: 0; }
+
+    li {
+        display: inline-block;
+
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include only-over-medium { height: 163px; line-height: 176px; }
+        @include only-medium      { height: 128px; line-height: 128px; }
+        @include only-small       { height: 128px; line-height: 128px; }
+        @include only-under-small { height: 64px;  line-height: 64px;  }
+
+        transition-property: height, line-height;
+        transition-duration: $transition-time;
+
+        a {
+            padding: 15px;
+            color: $text-color;
+            text-decoration: none;
+
+            @include only-under-small { padding: 10px; }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import 'variables';
+
+/*
+*
+* Section: About
+*
+*/
+
+body.status_about #content {
+
+    padding: 163px 45px 45px 215px;
+    @include only-medium      { padding: 129px 32px 32px 160px; }
+    @include only-small       { padding: 160px 32px 32px 32px; }
+    @include only-under-small { padding: 80px 16px 16px 16px; }
+
+    transition-property: padding, font-size;
+    transition-duration: $transition-time;
+
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.5;
+
+    color: $text-color;
+
+    p {
+        position: relative;
+        top: -.5rem;
+
+        margin-top: 1.2rem;
+        &:first-of-type { margin-top: 0; }
+
+        a { color: $text-color; }
+    }
+
+    #profile_mobile {
+        display: block;
+        width: 240px;
+        margin-bottom: 2rem;
+
+        border-radius: 100%;
+
+        transition-property: width, margin;
+        transition-duration: $transition-time;
+
+        @include only-over-large  { display: none; }
+        @include only-small       { margin: 1rem auto 2rem; }
+        @include only-under-small { width: 160px; margin: 1rem auto 2rem; }
+    }
+
+    #profile_pc {
+        z-index: -1;
+        position: fixed;
+        right: 0; top: 0;
+        width: 50%; height: 100%;
+        display: none;
+        
+        overflow: hidden;
+
+        @include only-over-large { display: block; }
+
+        img {
+            position: absolute;
+            left: 10vw; top: 50%;
+
+            width: 51vw;
+
+            transform: translateY( -42.33% )
+        }
+    }
+}

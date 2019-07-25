@@ -90,14 +90,14 @@ $height-breakpoints: (
     @media ( #{$over-huge-px} ) { & { @content; } }
 }
 
-.only-over-huge    { @media ( get-breakpoints('width', 'under-huge') ) { display: none; } }
-.only-under-huge   { @media ( get-breakpoints('width', 'over-huge') ) { display: none; } }
-.only-over-large   { @media ( get-breakpoints('width', 'under-large') ) { display: none; } }
-.only-under-large  { @media ( get-breakpoints('width', 'over-large') ) { display: none; } }
+.only-over-huge    { @media ( get-breakpoints('width', 'under-huge') )   { display: none; } }
+.only-under-huge   { @media ( get-breakpoints('width', 'over-huge') )    { display: none; } }
+.only-over-large   { @media ( get-breakpoints('width', 'under-large') )  { display: none; } }
+.only-under-large  { @media ( get-breakpoints('width', 'over-large') )   { display: none; } }
 .only-over-medium  { @media ( get-breakpoints('width', 'under-medium') ) { display: none; } }
-.only-under-medium { @media ( get-breakpoints('width', 'over-medium') ) { display: none; } }
-.only-over-small   { @media ( get-breakpoints('width', 'under-small') ) { display: none; } }
-.only-under-small  { @media ( get-breakpoints('width', 'over-small') ) { display: none; } }
+.only-under-medium { @media ( get-breakpoints('width', 'over-medium') )  { display: none; } }
+.only-over-small   { @media ( get-breakpoints('width', 'under-small') )  { display: none; } }
+.only-under-small  { @media ( get-breakpoints('width', 'over-small') )   { display: none; } }
 
 
 @mixin only-under-small-height {

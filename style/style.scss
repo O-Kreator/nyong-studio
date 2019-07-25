@@ -1,11 +1,14 @@
 @charset 'utf-8';
 
+@import './_reset.css';
 @import 'basic';
 
+@import 'menu';
 @import 'sectionIndex';
+@import 'sectionAbout';
 
 @import 'header';
-@import 'footer';
+@import 'contact';
 @import 'background';
 
 /*

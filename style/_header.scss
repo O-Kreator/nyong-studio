@@ -8,30 +8,36 @@
 
 body > header {
     position: fixed;
+    top: 0; left: 0;
 
-    top: 45px; left: 45px;
+    padding: 45px; padding-bottom: 0;
 
-    transition-property: top, left;
+    border-right:  1px solid $text-color;
+
+    transition-property: padding, width, height;
     transition-duration: $transition-time;
 
     img {
         width: 80px;
-        transition-property: width;
+        transition-property: width, height;
         transition-duration: $transition-time;
     }
 
     @include only-medium {
-        top: 32px; left: 32px;
+        padding: 32px; padding-bottom: 0;
         img { width: 64px; }
     }
 
     @include only-small {
-        top: 32px; left: 32px;
+        padding: 32px; height: 128px;
+        border-bottom: 1px solid $text-color; border-right: 0;
         img { width: 64px; }
     }
 
     @include only-under-small {
-        top: 16px; left: 16px;
-        img { width: 48px; }
+        padding: 16px; height: 64px;
+        border-bottom: 1px solid $text-color; border-right: 0;
+        img { width: 32px; }
     }
+
 }

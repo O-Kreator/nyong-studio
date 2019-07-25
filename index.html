@@ -6,40 +6,69 @@
 
         <link rel="stylesheet" href="https://use.typekit.net/pai0yij.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean">
-        <link rel="stylesheet" href="style/_reset.css">
-
         <link rel="stylesheet" href="style/style.scss">
 
         <title>Nyong Studio</title>
     </head>
-    <body class="status_index">
+    <body class="status_about">
 
-        <section id="index" class="fullscreen">
+        <header><img src="./img/logo_studio_withtypo.svg"></header>
+
+
+        <section id="content_wrapper">
+
+            <nav id="menu"><ul>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">About</a></li>
+            </ul></nav>
+
+            <div id="content">
+                <img id="profile_mobile" src="./img/image_doro-nyong.png">
+                <div id="profile_pc">
+                    <img src="./img/image_doro-nyong-pc.png">
+                </div>
+                <p>
+                    Hello! I’m Doro-nyong.<br>
+                    I’m interested in drawing cute characters<br>
+                    like Pokémon, furries and mascot.
+                </p>
+                <p>
+                    I can develop art of video games,<br>
+                    make music videos, and some comics.
+                </p>
+                <p>
+                    If you’re interested, talk with me<br>
+                    by <a href="#">e-mail</a>, <a href="#">Twitter</a>, <a href="#">Instargram</a>.
+                </p>
+                <p>
+                    You can also check my <a href="#">Youtube channel,</a><br>
+                    and <a href="#">Patreon</a> or <a href="#">Ko-fi</a>.
+                </p>
+            </div>
+
         </section>
 
-        <header>
-            <img src="./img/logo_studio_withtypo.svg">
-        </header>
-        
-        <footer>
-            <img src="./img/logo_okreator.svg">
-            <p class="only-over-large">
-                Copyright 2019<br>
-                <em>Nyong Studio</em>
-                <span class="only-over-huge"><br>All rights reserved.</span>
-            </p>
-            <p class="only-under-large">
-                &copy; 2019 <em>Nyong Studio</em>
-            </p>
-        </footer>
 
-        <div id="background">
+        <nav id="contact"><ul>
+            <li><a href="#"><img class="twitter" src="./img/icon_twitter.svg"></a></li>
+            <li><a href="#"><img class="twitter" src="./img/icon_twitter.svg"></a></li>
+            <li><a href="#"><img class="twitter" src="./img/icon_twitter.svg"></a></li>
+            <li><a href="#"><img class="twitter" src="./img/icon_twitter.svg"></a></li>
+        </ul></nav>
+
+        <div id="background_pc">
             <div class="fill_green"></div>
             <div class="fill_pattern"></div>
             <div class="fill_pattern"></div>
             <div class="fill_green"></div>
         </div>
 
-        <script src="script/app.js"></script>
+        <div id="background_mobile">
+            <div class="fill_green"></div>
+            <div class="fill_pattern"></div>
+            <div class="fill_pattern"></div>
+            <div class="fill_green"></div>
+        </div>
+
     </body>
 </html>

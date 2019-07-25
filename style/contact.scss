@@ -1,0 +1,47 @@
+@import 'variables';
+
+/*
+*
+* Contact
+*
+*/
+
+img {
+    &.twitter { width: 20px; }
+    &.youtube { width: 20px; }
+    &.instagram { width: 20px; }
+    &.devian { width: 12px; }
+}
+
+#contact {
+    position: fixed;
+    top: 198px; left: 0;
+
+    width: 170px;
+
+    text-align: center;
+
+    transition-property: top, width;
+    transition-duration: $transition-time;
+
+    img {
+        box-sizing: content-box;
+        padding: 10px;
+
+        transition-property: padding;
+        transition-duration: $transition-time;
+    }
+
+    @include only-medium {
+        top: 140px;
+        width: 128px;
+    }
+
+    @include only-small {
+        display: none;
+    }
+
+    @include only-under-small {
+        display: none;
+    }
+}
