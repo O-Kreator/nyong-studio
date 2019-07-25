@@ -96,7 +96,7 @@ IndexView.worksMenuListItemString = function(data) {
         </a>
     `;
 
-    return `<li>${worksMenuListItemInnerHTML}</li>`;
+    return `<li style="background-image: url(${data.thumbnail});">${worksMenuListItemInnerHTML}</li>`;
 }
 
 /** Make `<ul>` string for `#works_menu` */
